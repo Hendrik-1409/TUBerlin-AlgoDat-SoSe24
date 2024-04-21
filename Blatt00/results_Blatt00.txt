@@ -1,0 +1,19 @@
+Mon 22 Apr 2024 12:38:26 AM CEST
+Our test could not be run on your code. This usually means there is something broken in your code.
+To fix this issue please check the following points:
+
+- Your code should never be in any package. Remove all lines "package XXX;" from your submission.
+- You should not use any non-standard imports. Check the Beginning of your files for lines "import XXX" and remove them if they're not part of the Vorgabe.
+- You should never use System.exit(0) or similar in your code.
+- You should never change the function headers of the Vorgabe in your submission.
+- You need to adhere to the given directory structure (see exercise sheet, e.g., BlattXX/src/ - check for spaces!)
+- Your code should compile. If you see any red x in Eclipse or IDEA, please fix these problems before submitting.
+- Do not use any german Umlaut characters in variable names or output strings (best not to use them anywhere)
+
+For some of the algorithmic homeworks this error message might be caused by the inefficiency of your code. 
+If your code needs way too much time or tries to use way too much space the test is cancelced and this error message appears. 
+Check your termination conditions in recursions and loops (also in edge cases)! 
+If you think, this migt be the case and you cannot fix it, it is best to go to the Rechneruebung.
+
+If you checked all these points and there is still an issue, 
+please make sure you filled out the ISIS Kursregistrierung and ask in the corresponding ISIS Forum OR contact us via Mail.
