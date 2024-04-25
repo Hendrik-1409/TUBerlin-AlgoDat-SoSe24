@@ -12,7 +12,7 @@ public class Triangle extends ConvexPolygon {
 
     @Override
     public String toString() {
-        return super.toString();
+        return "Triangle{" + Arrays.toString(getVertices()) + "}";
     }
 
     public static void main(String[] args) {
