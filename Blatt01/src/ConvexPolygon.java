@@ -25,7 +25,7 @@ public class ConvexPolygon extends Polygon {
     public String toString() {
         String outputTxt;
         outputTxt = "ConvexPolygon([";
-        for (Vector2D vector2d : vertices) {
+        for (Vector2D vector2d : this.vertices) {
             outputTxt = outputTxt + vector2d.toString() + ", ";
         }
         outputTxt = outputTxt.substring(0, outputTxt.length() - 2) + "])";
@@ -36,7 +36,7 @@ public class ConvexPolygon extends Polygon {
     public double perimeter() {
         double perimeter = 0;
         Vector2D lastVector2d = null;
-        for (Vector2D vector2d : vertices) {
+        for (Vector2D vector2d : this.vertices) {
             if (lastVector2d != null) {
                 Vector2D tmp = new Vector2D(vector2d.getX() - lastVector2d.getX(), vector2d.getY() - lastVector2d.getY());
                 perimeter = perimeter + tmp.length();
@@ -54,7 +54,7 @@ public class ConvexPolygon extends Polygon {
         double area = 0;
         Vector2D oneVector2d = null;
         Vector2D startVector2d = vertices[0];
-        for (Vector2D vector2d : vertices) {
+        for (Vector2D vector2d : this.vertices) {
             if (oneVector2d == null || oneVector2d == startVector2d) {
                 oneVector2d = vector2d;
                 continue;
