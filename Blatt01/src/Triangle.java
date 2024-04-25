@@ -3,22 +3,24 @@ import java.util.Arrays;
 public class Triangle extends ConvexPolygon {
 
     public Triangle(Vector2D a, Vector2D b, Vector2D c) {
-        // TODO
+        super(new Vector2D[]{a, b, c});
     }
 
     public Triangle(Triangle triangle) {
-        // TODO
+        super(triangle.getVertices().clone());
     }
 
     @Override
     public double area() {
-        // TODO
+        // TODO Auto-generated method stub
+        return super.area();
     }
 
     @Override
     public String toString() {
-        // TODO
-        }
+        // TODO Auto-generated method stub
+        return super.toString();
+    }
 
     public static void main(String[] args) {
         Vector2D a = new Vector2D(0, 0);

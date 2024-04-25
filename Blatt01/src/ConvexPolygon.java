@@ -2,11 +2,23 @@ import java.util.Arrays;
 
 
 public class ConvexPolygon extends Polygon {
-    // TODO
+    
     private Vector2D[] vertices;
 
     public ConvexPolygon(Vector2D[] vertices){
         this.vertices = vertices;
+    }
+
+    ConvexPolygon(ConvexPolygon polygon) {
+        this.vertices = polygon.getVertices();
+    }
+
+    public void setVertices(Vector2D[] vertices) {
+        this.vertices = vertices;
+    }
+
+    public Vector2D[] getVertices() {
+        return vertices;
     }
 
     @Override
