@@ -1,4 +1,4 @@
-datsose24,  25.04.2024, 12:23:07, 12bcff9eb1de2e0ee447c307f93f7410ca307437
+datsose24,  26.04.2024, 00:22:21, 5300e9cae865831065b25322e3ac8ec9654ec515
 Korrektur Blatt 1
 
 Aufgabe 3
@@ -19,14 +19,9 @@ Aufgabe 4.1
 	The field ConvexPolygon.vertices is not visible
 
 	Test static method `somePolygons()` of ConvexPolygon: 0/5
-	  java.lang.Error: Unresolved compilation problems: 
-	Tetragon cannot be resolved to a type
-	Tetragon cannot be resolved to a type
-
+	   java.lang.NullPointerException in ConvexPolygonKorrektur.polygonsAreEqual(ConvexPolygonKorrektur.java:126)
 	Test static method `totalArea()` of ConvexPolygon: 0/5
-	  java.lang.Error: Unresolved compilation problem: 
-	The method totalArea(ConvexPolygon[]) is undefined for the type ConvexPolygon
-
+	   java.lang.NullPointerException in ConvexPolygonKorrektur.calculateArea(ConvexPolygonKorrektur.java:27)
 Total points for Aufgabe 4.1: 5/25
 
 Aufgabe 4.2
@@ -50,27 +45,14 @@ Aufgabe 4.2
 Total points for Aufgabe 4.2: 5/20
 
 Aufgabe 4.3
+	Test constructor of Tetragon: 2/2
+	Test perimeter calculation of Tetragon: 1/1
+	Test toString method of Tetragon: 1/1
 	Test area calculation of Tetragon: 0/1
-	  java.lang.Error: Unresolved compilation problems: 
-	Tetragon cannot be resolved to a type
-	Tetragon cannot be resolved to a type
-
-	Test constructor of Tetragon: 0/2
-	  java.lang.Error: Unresolved compilation problems: 
-	Tetragon cannot be resolved to a type
-	Tetragon cannot be resolved to a type
-
-	Test perimeter calculation of Tetragon: 0/1
-	  java.lang.Error: Unresolved compilation problems: 
-	Tetragon cannot be resolved to a type
-	Tetragon cannot be resolved to a type
-
-	Test toString method of Tetragon: 0/1
-	  java.lang.Error: Unresolved compilation problems: 
-	Tetragon cannot be resolved to a type
-	Tetragon cannot be resolved to a type
-
-Total points for Aufgabe 4.3: 0/5
+	  java.lang.AssertionError: Die mit `area()` berechnete Fläche des Tetragons ist nicht korrekt. expected [189.01
+] but found [-189.01
+]
+Total points for Aufgabe 4.3: 4/5
 
 Aufgabe 4.4
 	Test basic constructor of RegularPolygon: 0/5
@@ -93,4 +75,4 @@ Aufgabe 4.4
 
 Total points for Aufgabe 4.4: 0/20
 
-Total points: 40/100
+Total points: 44/100
