@@ -34,10 +34,15 @@ public void setFirst(E first) {
 public void setSecond(E second) {
     this.second = second;
 }
-@Override
-public boolean equals(Object obj) {
-    // TODO Auto-generated method stub
-    return super.equals(obj);
+
+public boolean equals(Pair<E> obj) {
+    if (this == obj) {
+        return true;
+    }
+    if (this.first == obj.getFirst() && this.second == obj.getSecond()) {
+        return true;
+    }
+    return false;
 }
 
 public void swap() {

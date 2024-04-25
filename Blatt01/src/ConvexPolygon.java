@@ -35,6 +35,33 @@ public class ConvexPolygon extends Polygon {
         perimeter = perimeter + ringClose.length();
         return perimeter;
     }
+
+    @Override
+    public double area() {
+        double area = 0;
+        Vector2D oneVector2d = null;
+        Vector2D startVector2d = vertices[0];
+        for (Vector2D vector2d : vertices) {
+            if (oneVector2d == null || oneVector2d == startVector2d) {
+                oneVector2d = vector2d;
+                continue;
+            }
+            else{
+                Vector2D a = new Vector2D(oneVector2d.getX() - startVector2d.getX(), oneVector2d.getY() - startVector2d.getY());
+                Vector2D b = new Vector2D(vector2d.getX() - startVector2d.getX(), vector2d.getY() - startVector2d.getY());
+                area = area + ((Math.sqrt(a.getX() * a.getX() + a.getY() * a.getY())) * (Math.sqrt(b.getX() * b.getX() + b.getY() * b.getY())) / 2);
+                oneVector2d = vector2d;
+            }
+        }
+        return area;
+    }
+
+    public static Polygon[] somePolygons() {
+        Polygon[] output = new Polygon[4];
+        output[0] = new ConvexPolygon(new Vector2D[]{new Vector2D(0, 0), new Vector2D(10, 0), new Vector2D(5, 5)});
+        output[1] = new ConvexPolygon(new Vector2D[]{new Vector2D(0, 0), new Vector2D(10, -5), new Vector2D(12, 2), new Vector2D(3, 17)});
+        return output;
+    }
 }
 
 
