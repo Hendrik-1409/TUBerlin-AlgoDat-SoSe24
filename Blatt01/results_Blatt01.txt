@@ -1,19 +1,96 @@
-Thu 25 Apr 2024 12:21:40 AM CEST, 2c14eaa6e20e342ff800baced4a6669051810cbd
-Our test could not be run on your code. This usually means there is something broken in your code.
-To fix this issue please check the following points:
+datsose24,  25.04.2024, 12:23:07, 12bcff9eb1de2e0ee447c307f93f7410ca307437
+Korrektur Blatt 1
 
-- Your code should never be in any package. Remove all lines "package XXX;" from your submission.
-- You should not use any non-standard imports. Check the Beginning of your files for lines "import XXX" and remove them if they're not part of the Vorgabe.
-- You should never use System.exit(0) or similar in your code.
-- You should never change the function headers of the Vorgabe in your submission.
-- You need to adhere to the given directory structure (see exercise sheet, e.g., BlattXX/src/ - check for spaces!)
-- Your code should compile. If you see any red x in Eclipse or IDEA, please fix these problems before submitting.
-- Do not use any german Umlaut characters in variable names or output strings (best not to use them anywhere)
+Aufgabe 3
+	Test equals(): 5/5
+	Test getter methods: 5/5
+	Test constructor of pair with `Double[]` objects as elements: 5/5
+	Test constructor of pair with Integer elements: 5/5
+	Test setter methods: 5/5
+	Test `swap()`: 5/5
+Total points for Aufgabe 3: 30/30
 
-For some of the algorithmic homeworks this error message might be caused by the inefficiency of your code. 
-If your code needs way too much time or tries to use way too much space the test is cancelced and this error message appears. 
-Check your termination conditions in recursions and loops (also in edge cases)! 
-If you think, this migt be the case and you cannot fix it, it is best to go to the Rechneruebung.
+Aufgabe 4.1
+	Test constructor of ConvexPolygon: 5/5
+	Test `area()` method of ConvexPolygon: 0/5
+	   java.lang.NullPointerException in ConvexPolygonKorrektur.calculateArea(ConvexPolygonKorrektur.java:27)
+	Test `perimeter()` method of ConvexPolygon: 0/5
+	  java.lang.Error: Unresolved compilation problem: 
+	The field ConvexPolygon.vertices is not visible
 
-If you checked all these points and there is still an issue, 
-please make sure you filled out the ISIS Kursregistrierung and ask in the corresponding ISIS Forum OR contact us via Mail.
+	Test static method `somePolygons()` of ConvexPolygon: 0/5
+	  java.lang.Error: Unresolved compilation problems: 
+	Tetragon cannot be resolved to a type
+	Tetragon cannot be resolved to a type
+
+	Test static method `totalArea()` of ConvexPolygon: 0/5
+	  java.lang.Error: Unresolved compilation problem: 
+	The method totalArea(ConvexPolygon[]) is undefined for the type ConvexPolygon
+
+Total points for Aufgabe 4.1: 5/25
+
+Aufgabe 4.2
+	Test constructor of Triangle: 5/5
+	Test `area()` method of Triangle: 0/10
+	  java.lang.Error: Unresolved compilation problems: 
+	The field ConvexPolygon.vertices is not visible
+	The field ConvexPolygon.vertices is not visible
+	The field ConvexPolygon.vertices is not visible
+
+	Test copy constructor of Triangle: 0/5
+	  java.lang.Error: Unresolved compilation problems: 
+	The field ConvexPolygon.vertices is not visible
+	The field ConvexPolygon.vertices is not visible
+	The field ConvexPolygon.vertices is not visible
+	The field ConvexPolygon.vertices is not visible
+	The field ConvexPolygon.vertices is not visible
+	The field ConvexPolygon.vertices is not visible
+	The field ConvexPolygon.vertices is not visible
+
+Total points for Aufgabe 4.2: 5/20
+
+Aufgabe 4.3
+	Test area calculation of Tetragon: 0/1
+	  java.lang.Error: Unresolved compilation problems: 
+	Tetragon cannot be resolved to a type
+	Tetragon cannot be resolved to a type
+
+	Test constructor of Tetragon: 0/2
+	  java.lang.Error: Unresolved compilation problems: 
+	Tetragon cannot be resolved to a type
+	Tetragon cannot be resolved to a type
+
+	Test perimeter calculation of Tetragon: 0/1
+	  java.lang.Error: Unresolved compilation problems: 
+	Tetragon cannot be resolved to a type
+	Tetragon cannot be resolved to a type
+
+	Test toString method of Tetragon: 0/1
+	  java.lang.Error: Unresolved compilation problems: 
+	Tetragon cannot be resolved to a type
+	Tetragon cannot be resolved to a type
+
+Total points for Aufgabe 4.3: 0/5
+
+Aufgabe 4.4
+	Test basic constructor of RegularPolygon: 0/5
+	  java.lang.Error: Unresolved compilation problem: 
+	The field ConvexPolygon.vertices is not visible
+
+	Test copy constructor of RegularPolygon: 0/5
+	  java.lang.Error: Unresolved compilation problem: 
+	The field ConvexPolygon.vertices is not visible
+
+	Test `resize()` method of RegularPolygon: 0/10
+	  java.lang.Error: Unresolved compilation problems: 
+	The field ConvexPolygon.vertices is not visible
+	The field ConvexPolygon.vertices is not visible
+	The field ConvexPolygon.vertices is not visible
+	The field ConvexPolygon.vertices is not visible
+	The field ConvexPolygon.vertices is not visible
+	The field ConvexPolygon.vertices is not visible
+	The field ConvexPolygon.vertices is not visible
+
+Total points for Aufgabe 4.4: 0/20
+
+Total points: 40/100
