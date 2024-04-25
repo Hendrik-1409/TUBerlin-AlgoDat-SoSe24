@@ -11,14 +11,7 @@ public class Triangle extends ConvexPolygon {
     }
 
     @Override
-    public double area() {
-        // TODO Auto-generated method stub
-        return super.area();
-    }
-
-    @Override
     public String toString() {
-        // TODO Auto-generated method stub
         return super.toString();
     }
 

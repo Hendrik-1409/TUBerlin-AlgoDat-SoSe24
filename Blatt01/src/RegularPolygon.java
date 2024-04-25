@@ -43,7 +43,7 @@ public class RegularPolygon extends ConvexPolygon {
 
     @Override
     public String toString() {
-        return "regular polygon{N=" + N + ", radius=" + radius + "}";
+        return "RegularPolygon{N=" + N + ", radius=" + radius + "}";
     }
 
     public static void main(String[] args) {
