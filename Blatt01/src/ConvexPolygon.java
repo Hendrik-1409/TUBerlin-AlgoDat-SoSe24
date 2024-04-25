@@ -50,6 +50,7 @@ public class ConvexPolygon extends Polygon {
 
     @Override
     public double area() {
+        //https://math.stackexchange.com/questions/4626242/how-do-you-find-the-area-of-a-triangle-given-two-2d-vectors
         double area = 0;
         Vector2D oneVector2d = null;
         Vector2D startVector2d = vertices[0];
@@ -61,7 +62,7 @@ public class ConvexPolygon extends Polygon {
             else{
                 Vector2D a = new Vector2D(oneVector2d.getX() - startVector2d.getX(), oneVector2d.getY() - startVector2d.getY());
                 Vector2D b = new Vector2D(vector2d.getX() - startVector2d.getX(), vector2d.getY() - startVector2d.getY());
-                area = area + ((Math.sqrt(a.getX() * a.getX() + a.getY() * a.getY())) * (Math.sqrt(b.getX() * b.getX() + b.getY() * b.getY())) / 2);
+                area += (a.getX() * b.getY() - a.getY() * b.getX()) / 2;
                 oneVector2d = vector2d;
             }
         }
