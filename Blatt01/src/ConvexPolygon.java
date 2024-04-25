@@ -77,6 +77,14 @@ public class ConvexPolygon extends Polygon {
         output[2] = new RegularPolygon(6, 1);
         return output;
     }
+
+    public static double totalArea(Polygon[] polygons) {
+        double totalArea = 0;
+        for (Polygon polygon : polygons) {
+            totalArea += polygon.area();
+        }
+        return totalArea;
+    }
 }
 
 
