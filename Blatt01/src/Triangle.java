@@ -7,12 +7,12 @@ public class Triangle extends ConvexPolygon {
     }
 
     public Triangle(Triangle triangle) {
-        super(triangle.getVertices().clone());
+        super(triangle.vertices.clone());
     }
 
     @Override
     public String toString() {
-        return "Triangle{" + Arrays.toString(getVertices()) + "}";
+        return "Triangle{" + Arrays.toString(this.vertices) + "}";
     }
 
     public static void main(String[] args) {
