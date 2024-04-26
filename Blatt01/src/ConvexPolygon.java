@@ -9,7 +9,7 @@ public class ConvexPolygon extends Polygon {
         this.vertices = vertices;
     }
 
-    ConvexPolygon(ConvexPolygon polygon) {
+    public ConvexPolygon(ConvexPolygon polygon) {
         this.vertices = polygon.getVertices();
     }
 
@@ -18,7 +18,7 @@ public class ConvexPolygon extends Polygon {
     }
 
     public Vector2D[] getVertices() {
-        return vertices;
+        return this.vertices;
     }
 
     @Override
