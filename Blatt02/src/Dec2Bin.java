@@ -28,7 +28,11 @@ public class Dec2Bin {
      * @param N the number that is to be converted.
      */
     public void convert(int N) {
-        // TODO implement this method
+        this.N = N;
+        while (N > 0) {
+            binStack.push(N % 2);
+            N = N / 2;
+        }
     }
 
     /**
@@ -41,8 +45,11 @@ public class Dec2Bin {
      */
     @Override
     public String toString() {
-        // Caution: Stack.toString() does NOT respect stack order. Do not use it.
-        // TODO implement this method
+        String output = "";
+        for (int i = binStack.size() - 1; i >= 0; i--) {
+            output += binStack.get(i);
+        }
+        return output;
     }
 
     public static void main(String[] args) {
