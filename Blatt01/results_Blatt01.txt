@@ -1,4 +1,4 @@
-datsose24,  27.04.2024, 00:22:20, 0995e40d16921cfabb729254fa442098377bee04
+datsose24,  30.04.2024, 12:21:20, de70c53b5166616731f1ce1d9fbb5572e3f03756
 Korrektur Blatt 1
 
 Aufgabe 3
@@ -14,24 +14,9 @@ Aufgabe 4.1
 	Test `area()` method of ConvexPolygon: 5/5
 	Test constructor of ConvexPolygon: 5/5
 	Test `perimeter()` method of ConvexPolygon: 5/5
-	Test static method `somePolygons()` of ConvexPolygon: 0/5
-	  java.lang.AssertionError: Die Rückgabe von `somePolygons()` ist nicht korrekt.
-An Stelle 2 wird erwartet: ConvexPolygon([(1.0, 0.0), (0.30901699437494745, 0.9510565162951535), (-0.8090169943749473, 0.5877852522924732), (-0.8090169943749476, -0.587785252292473), (0.30901699437494723, -0.9510565162951536)])
-Aber bei der Rückgabe steht: ConvexPolygon([(1.0, 0.0), (0.5000000000000001, 0.8660254037844386), (-0.4999999999999998, 0.8660254037844387), (-1.0, 1.2246467991473532E-16), (-0.5000000000000004, -0.8660254037844384), (0.49999999999999933, -0.866025403784439)])
-	Test static method `totalArea()` of ConvexPolygon: 0/5
-	  java.lang.AssertionError: Die Methode `totalArea()` gibt den falschen Flächeninhalt zurück.
-Erwarteter Wert: 833.7202714660712 LE^2
-Zurückgegebener Wert: 792.0475530831467 LE^2
-Das zum Testen genutzte Array enthält die folgenden konvexen Polygone:
-ConvexPolygon([(9.725196068960525, 0.0), (0.8012813388117744, -1.3878599899788058), (2.002692509457669, 3.468765178318293)])
-ConvexPolygon([(8.817018185803935, 0.0), (1.7778898336275104E-17, 0.29035144416583564), (-6.274518898923593, 7.684069485756353E-16), (-2.0655599454030881E-16, -1.1244384622250332)])
-ConvexPolygon([(4.878814495350651, 0.0), (1.8474145649666878, 5.6857573929357565), (-3.590353673870575, 2.6085446346472634), (-4.1136323502693, -2.9887288470492903), (0.9804492470544877, -3.0175125066954718)])
-ConvexPolygon([(7.300531565960071, 0.0), (4.936218288675096, 8.549780873235958), (-4.118674315648942, 7.133753174532947), (-7.983410142110449, 9.776857676816077E-16), (-2.9377348790725915, -5.088306069720934), (4.209542848537432, -7.2911420903050495)])
-ConvexPolygon([(9.531264094652345, 0.0), (5.330891450078705, 6.684726442783913), (-1.5563604251637002, 6.81886055810438), (-6.625682681764862, 3.1907606118105583), (-6.2445730755264455, -3.007227898462404), (-1.6665975515507063, -7.301840966116264), (4.132311047621046, -5.18175415660221)])
-ConvexPolygon([(8.186828959796243, 0.0), (5.088900598023039, 5.088900598023038), (5.106502214537117E-16, 8.339550992322787), (-6.276772588692729, 6.27677258869273), (-7.346246472540758, 8.996557228344574E-16), (-5.5548365632760355, -5.554836563276034), (-1.71311674216713E-15, -9.32577318543256), (6.03239223152433, -6.032392231524333)])
-ConvexPolygon([(9.35244957813062, 0.0), (6.0630207938656415, 5.087478511952839), (1.7182699495881688, 9.744793126294816), (-4.979886885211951, 8.625417101133024), (-9.37065764775381, 3.4106404592813364), (-8.680617861197435, -3.1594865165154102), (-4.437421252392892, -7.685839063730399), (1.4231996269617795, -8.071366170075065), (6.080070782557504, -5.101785151175762)])
-
-Total points for Aufgabe 4.1: 15/25
+	Test static method `somePolygons()` of ConvexPolygon: 5/5
+	Test static method `totalArea()` of ConvexPolygon: 5/5
+Total points for Aufgabe 4.1: 25/25
 
 Aufgabe 4.2
 	Test `area()` method of Triangle: 10/10
@@ -40,14 +25,11 @@ Aufgabe 4.2
 Total points for Aufgabe 4.2: 20/20
 
 Aufgabe 4.3
+	Test area calculation of Tetragon: 1/1
 	Test constructor of Tetragon: 2/2
 	Test perimeter calculation of Tetragon: 1/1
 	Test toString method of Tetragon: 1/1
-	Test area calculation of Tetragon: 0/1
-	  java.lang.AssertionError: Die mit `area()` berechnete Fläche des Tetragons ist nicht korrekt. expected [189.01
-] but found [-189.01
-]
-Total points for Aufgabe 4.3: 4/5
+Total points for Aufgabe 4.3: 5/5
 
 Aufgabe 4.4
 	Test basic constructor of RegularPolygon: 5/5
@@ -55,4 +37,4 @@ Aufgabe 4.4
 	Test `resize()` method of RegularPolygon: 10/10
 Total points for Aufgabe 4.4: 20/20
 
-Total points: 89/100
+Total points: 100/100
