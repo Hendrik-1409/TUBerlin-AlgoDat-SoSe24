@@ -52,7 +52,7 @@ public class ConvexPolygon extends Polygon {
                 oneVector2d = vector2d;
             }
         }
-        return area;
+        return Math.abs(area);
     }
 
     public static Polygon[] somePolygons() {
@@ -60,7 +60,7 @@ public class ConvexPolygon extends Polygon {
         output[0] = new ConvexPolygon(new Vector2D[]{new Vector2D(0, 0), new Vector2D(10, 0), new Vector2D(5, 5)});
         output[1] = new ConvexPolygon(new Vector2D[]{new Vector2D(0, 0), new Vector2D(10, -5), new Vector2D(12, 2), new Vector2D(3, 17)});
         output[2] = new RegularPolygon(5, 1);
-        output[2] = new RegularPolygon(6, 1);
+        output[3] = new RegularPolygon(6, 1);
         return output;
     }
 
