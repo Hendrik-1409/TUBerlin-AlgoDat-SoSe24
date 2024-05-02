@@ -62,11 +62,11 @@ public class Bettelmann {
                 return;
             }
             else if (closedPile1.isEmpty()) {
-                this.winner = 1;
+                this.winner = 2;
                 return;
             }
             else if (closedPile2.isEmpty()) {
-                this.winner = 2;
+                this.winner = 1;
                 return;
             }
             openDeck1.addLast(closedPile1.removeFirst());
