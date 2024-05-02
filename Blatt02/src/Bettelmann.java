@@ -75,13 +75,17 @@ public class Bettelmann {
         if (openDeck1.peekLast().compareTo(openDeck2.peekLast()) > 0) {
             for (int i = 0; i < openDeck1.size(); i++) {
                 closedPile1.addLast(openDeck1.getLast());
+            }
+            for (int i = 0; i < openDeck2.size(); i++) {
                 closedPile1.addLast(openDeck2.getLast());
             }
         }
         else {
             for (int i = 0; i < openDeck1.size(); i++) {
-                closedPile2.addLast(openDeck2.getLast());
                 closedPile2.addLast(openDeck1.getLast());
+            }
+            for (int i = 0; i < openDeck2.size(); i++) {
+                closedPile2.addLast(openDeck2.getLast());
             }
         }
     }
