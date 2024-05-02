@@ -71,7 +71,7 @@ public class Bettelmann {
             }
             openDeck1.add(closedPile1.removeFirst());
             openDeck2.add(closedPile2.removeFirst());
-        } while (openDeck1.peekFirst().compareTo(openDeck2.peekFirst()) == 0);
+        } while (openDeck1.peekLast().compareTo(openDeck2.peekLast()) == 0);
         if (openDeck1.peekFirst().compareTo(openDeck2.peekFirst()) > 0) {
             closedPile1.addAll(openDeck1);
             closedPile1.addAll(openDeck2);
@@ -80,7 +80,6 @@ public class Bettelmann {
             closedPile2.addAll(openDeck1);
             closedPile2.addAll(openDeck2);
         }
-        playRound();
     }
 
     /**
