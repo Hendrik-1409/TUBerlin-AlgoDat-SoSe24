@@ -53,8 +53,34 @@ public class Bettelmann {
      * higher ranked card wins the trick, so all drawn cards from that round are added
      * to the bottom of her/his closed pile of cards.
      */
-    public void playRound() {
-        // TODO implement this method
+    public void playRound() {       
+        Deque<Card> openDeck1 = new LinkedList<>();
+        Deque<Card> openDeck2 = new LinkedList<>();
+        do {
+            if (closedPile1.isEmpty() && closedPile2.isEmpty()) {
+                this.winner = 0;
+                return;
+            }
+            else if (closedPile1.isEmpty()) {
+                this.winner = 1;
+                return;
+            }
+            else if (closedPile2.isEmpty()) {
+                this.winner = 2;
+                return;
+            }
+            openDeck1.add(closedPile1.removeFirst());
+            openDeck2.add(closedPile2.removeFirst());
+        } while (openDeck1.peekFirst().compareTo(openDeck2.peekFirst()) == 0);
+        if (openDeck1.peekFirst().compareTo(openDeck2.peekFirst()) > 0) {
+            closedPile1.addAll(openDeck1);
+            closedPile1.addAll(openDeck2);
+        }
+        else {
+            closedPile2.addAll(openDeck1);
+            closedPile2.addAll(openDeck2);
+        }
+        playRound();
     }
 
     /**
