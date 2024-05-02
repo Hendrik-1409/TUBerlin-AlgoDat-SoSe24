@@ -50,7 +50,7 @@ public class Dec2Bin {
     @Override
     public String toString() {
         String output = "";
-        for (int i = binStack.size(); i >= 0; i--) {
+        for (int i = binStack.size() - 1; i >= 0; i--) {
             output += binStack.get(i);
         }
         return output;
