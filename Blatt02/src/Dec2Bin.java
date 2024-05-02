@@ -28,7 +28,11 @@ public class Dec2Bin {
      * @param N the number that is to be converted.
      */
     public void convert(int N) {
+        binStack.clear();
         this.N = N;
+        if (N == 0) {
+            binStack.push(0);
+        }
         while (N > 0) {
             binStack.push(N % 2);
             N = N / 2;
@@ -46,7 +50,7 @@ public class Dec2Bin {
     @Override
     public String toString() {
         String output = "";
-        for (int i = binStack.size() - 1; i >= 0; i--) {
+        for (int i = binStack.size(); i >= 0; i--) {
             output += binStack.get(i);
         }
         return output;
