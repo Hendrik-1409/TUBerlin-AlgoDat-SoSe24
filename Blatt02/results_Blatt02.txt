@@ -1,4 +1,4 @@
-datsose24,  02.05.2024, 14:22:01, 711375d55d39df2e5a8321e852d9fbb0321f0d70
+datsose24,  03.05.2024, 02:20:30, 3a8034607be56bca19b4453ae6b072c4c2da8ec4
 Korrektur Blatt 2
 
 Aufgabe 3.1
@@ -7,74 +7,71 @@ Aufgabe 3.1
 Total points for Aufgabe 3.1: 15/15
 
 Aufgabe 3.2
-	Test output of toString() for several numbers: 0/5
-	  java.lang.ArrayIndexOutOfBoundsException: Array index out of range: 5
-	Test basic functionality of toString(): 0/5
-	  java.lang.ArrayIndexOutOfBoundsException: Array index out of range: 6
-	Test functionality of toString() for 0: 0/5
-	  java.lang.ArrayIndexOutOfBoundsException: Array index out of range: 1
-Total points for Aufgabe 3.2: 0/15
+	Test output of toString() for several numbers: 5/5
+	Test basic functionality of toString(): 5/5
+	Test functionality of toString() for 0: 5/5
+Total points for Aufgabe 3.2: 15/15
 
 Aufgabe 4.2
 	Test the winner of  playRound() with several sample games 1: 0/5
 	  java.lang.AssertionError: We tested playRound() in the following situation:
+Player 1: [♠10, ♠K, ♣A, ♥K, ♦K, ♥7, ♦D, ♦A, ♦9, ♠B, ♠9, ♦8, ♣10, ♣8, ♥10, ♥D, ♥9]
+Player 2: [♦B, ♣K, ♦7, ♦10, ♠D, ♠8, ♣B, ♣D, ♥A, ♥8, ♣7, ♠7, ♠A, ♥B, ♣9]
+Your method resulted in the following situation
+Player 1: [♠K, ♣A, ♥K, ♦K, ♥7, ♦D, ♦A, ♦9, ♠B, ♠9, ♦8, ♣10, ♣8, ♥10, ♥D, ♥9]
+Player 2: [♣K, ♦7, ♦10, ♠D, ♠8, ♣B, ♣D, ♥A, ♥8, ♣7, ♠7, ♠A, ♥B, ♣9, ♠10, ♦B]
+while we expected:
 Player 1: [♠K, ♣A, ♥K, ♦K, ♥7, ♦D, ♦A, ♦9, ♠B, ♠9, ♦8, ♣10, ♣8, ♥10, ♥D, ♥9]
 Player 2: [♣K, ♦7, ♦10, ♠D, ♠8, ♣B, ♣D, ♥A, ♥8, ♣7, ♠7, ♠A, ♥B, ♣9, ♦B, ♠10]
-Your method resulted in the following situation
-Player 1: [♥K, ♦K, ♥7, ♦D, ♦A, ♦9, ♠B, ♠9, ♦8, ♣10, ♣8, ♥10, ♥D, ♥9, ♣A, ♦7, ♣A, ♦7]
-Player 2: [♦10, ♠D, ♠8, ♣B, ♣D, ♥A, ♥8, ♣7, ♠7, ♠A, ♥B, ♣9, ♦B, ♠10]
-while we expected:
-Player 1: [♥K, ♦K, ♥7, ♦D, ♦A, ♦9, ♠B, ♠9, ♦8, ♣10, ♣8, ♥10, ♥D, ♥9, ♠K, ♣A, ♣K, ♦7]
-Player 2: [♦10, ♠D, ♠8, ♣B, ♣D, ♥A, ♥8, ♣7, ♠7, ♠A, ♥B, ♣9, ♦B, ♠10]
 
 	Test the winner of  playRound() with several sample games 2: 0/5
 	  java.lang.AssertionError: We tested playRound() in the following situation:
-Player 1: [♥A, ♦10, ♥D, ♣7, ♥K, ♦7, ♠9, ♥8, ♣B, ♥9, ♦K, ♦9, ♣A, ♥10]
-Player 2: [♠A, ♣10, ♣9, ♣8, ♣K, ♦B, ♠10, ♦8, ♠K, ♣D, ♠D, ♥B, ♠B, ♠7, ♦A, ♠8, ♦D, ♥7]
+Player 1: [♣10, ♥A, ♥D, ♣8, ♦B, ♦8, ♥K, ♣D, ♠9, ♥B, ♣B, ♠7, ♠8, ♦K, ♥7, ♣A]
+Player 2: [♠A, ♦10, ♣7, ♣9, ♣K, ♠10, ♦7, ♠K, ♥8, ♠D, ♥9, ♠B, ♦A, ♦9, ♦D, ♥10]
 Your method resulted in the following situation
-Player 1: [♣7, ♥K, ♦7, ♠9, ♥8, ♣B, ♥9, ♦K, ♦9, ♣A, ♥10, ♥D, ♣9, ♥D, ♣9, ♥D, ♣9]
-Player 2: [♣8, ♣K, ♦B, ♠10, ♦8, ♠K, ♣D, ♠D, ♥B, ♠B, ♠7, ♦A, ♠8, ♦D, ♥7]
+Player 1: [♥A, ♥D, ♣8, ♦B, ♦8, ♥K, ♣D, ♠9, ♥B, ♣B, ♠7, ♠8, ♦K, ♥7, ♣A]
+Player 2: [♦10, ♣7, ♣9, ♣K, ♠10, ♦7, ♠K, ♥8, ♠D, ♥9, ♠B, ♦A, ♦9, ♦D, ♥10, ♣10, ♠A]
 All tests for the first half of the sample games have been passed successfully.The expected result for sample games of the second half are not disclosed.
 
 	Test the winner of  playRound() with several sample games 3: 0/5
 	  java.lang.AssertionError: We tested playRound() in the following situation:
-Player 1: [♥10, ♥9, ♠D, ♦8, ♦D, ♠B, ♦9, ♣8, ♣A, ♣9, ♥A, ♥8, ♣K, ♥7, ♦B, ♠8, ♠K, ♥D, ♣B, ♠10]
-Player 2: [♦10, ♦7, ♦K, ♥B, ♣10, ♠7, ♦A, ♠9, ♥K, ♣D, ♠A, ♣7]
+Player 1: [♠10, ♠K, ♥10, ♠D, ♦7, ♦D, ♦9, ♥B, ♣A, ♠7, ♥A, ♣K, ♠9, ♣D, ♣7, ♦B]
+Player 2: [♥D, ♣B, ♥9, ♦8, ♦10, ♠B, ♣8, ♦K, ♣9, ♣10, ♥8, ♥7, ♦A, ♥K, ♠A, ♠8]
 Your method resulted in the following situation
-Player 1: [♠D, ♦8, ♦D, ♠B, ♦9, ♣8, ♣A, ♣9, ♥A, ♥8, ♣K, ♥7, ♦B, ♠8, ♠K, ♥D, ♣B, ♠10, ♥9, ♦7, ♥9, ♦7]
-Player 2: [♦K, ♥B, ♣10, ♠7, ♦A, ♠9, ♥K, ♣D, ♠A, ♣7]
+Player 1: [♠K, ♥10, ♠D, ♦7, ♦D, ♦9, ♥B, ♣A, ♠7, ♥A, ♣K, ♠9, ♣D, ♣7, ♦B]
+Player 2: [♣B, ♥9, ♦8, ♦10, ♠B, ♣8, ♦K, ♣9, ♣10, ♥8, ♥7, ♦A, ♥K, ♠A, ♠8, ♠10, ♥D]
 All tests for the first half of the sample games have been passed successfully.The expected result for sample games of the second half are not disclosed.
 
 	Test playRound() with several sample games: 0/10
 	  java.lang.AssertionError: We tested playRound() in the following situation:
+Player 1: [♠10, ♠K, ♣A, ♥K, ♦K, ♥7, ♦D, ♦A, ♦9, ♠B, ♠9, ♦8, ♣10, ♣8, ♥10, ♥D, ♥9]
+Player 2: [♦B, ♣K, ♦7, ♦10, ♠D, ♠8, ♣B, ♣D, ♥A, ♥8, ♣7, ♠7, ♠A, ♥B, ♣9]
+Your method resulted in the following situation
+Player 1: [♠K, ♣A, ♥K, ♦K, ♥7, ♦D, ♦A, ♦9, ♠B, ♠9, ♦8, ♣10, ♣8, ♥10, ♥D, ♥9]
+Player 2: [♣K, ♦7, ♦10, ♠D, ♠8, ♣B, ♣D, ♥A, ♥8, ♣7, ♠7, ♠A, ♥B, ♣9, ♠10, ♦B]
+while we expected:
 Player 1: [♠K, ♣A, ♥K, ♦K, ♥7, ♦D, ♦A, ♦9, ♠B, ♠9, ♦8, ♣10, ♣8, ♥10, ♥D, ♥9]
 Player 2: [♣K, ♦7, ♦10, ♠D, ♠8, ♣B, ♣D, ♥A, ♥8, ♣7, ♠7, ♠A, ♥B, ♣9, ♦B, ♠10]
-Your method resulted in the following situation
-Player 1: [♥K, ♦K, ♥7, ♦D, ♦A, ♦9, ♠B, ♠9, ♦8, ♣10, ♣8, ♥10, ♥D, ♥9, ♣A, ♦7, ♣A, ♦7]
-Player 2: [♦10, ♠D, ♠8, ♣B, ♣D, ♥A, ♥8, ♣7, ♠7, ♠A, ♥B, ♣9, ♦B, ♠10]
-while we expected:
-Player 1: [♥K, ♦K, ♥7, ♦D, ♦A, ♦9, ♠B, ♠9, ♦8, ♣10, ♣8, ♥10, ♥D, ♥9, ♠K, ♣A, ♣K, ♦7]
-Player 2: [♦10, ♠D, ♠8, ♣B, ♣D, ♥A, ♥8, ♣7, ♠7, ♠A, ♥B, ♣9, ♦B, ♠10]
 
 	Test playRound() with several sample games: 0/10
 	  java.lang.AssertionError: We tested playRound() in the following situation:
-Player 1: [♣A, ♦9, ♥B, ♠7, ♠9, ♦7, ♥A, ♣9, ♠A, ♥8, ♠D, ♠8, ♥K, ♥10, ♥D, ♥7, ♦B, ♦8]
-Player 2: [♦A, ♠K, ♠10, ♥9, ♣8, ♣7, ♣K, ♣D, ♣B, ♣10, ♦K, ♠B, ♦D, ♦10]
+Player 1: [♥7, ♦8, ♣8, ♣D, ♠B, ♣B, ♦D, ♣A, ♥B, ♠9, ♥A, ♠A, ♠D, ♥K, ♥D, ♠K, ♦B, ♥9, ♣7]
+Player 2: [♥10, ♦A, ♠10, ♣10, ♦10, ♣K, ♦K, ♦9, ♠7, ♦7, ♣9, ♥8, ♠8]
 Your method resulted in the following situation
-Player 1: [♥B, ♠7, ♠9, ♦7, ♥A, ♣9, ♠A, ♥8, ♠D, ♠8, ♥K, ♥10, ♥D, ♥7, ♦B, ♦8]
-Player 2: [♠10, ♥9, ♣8, ♣7, ♣K, ♣D, ♣B, ♣10, ♦K, ♠B, ♦D, ♦10, ♠K, ♦9, ♠K, ♦9]
+Player 1: [♦8, ♣8, ♣D, ♠B, ♣B, ♦D, ♣A, ♥B, ♠9, ♥A, ♠A, ♠D, ♥K, ♥D, ♠K, ♦B, ♥9, ♣7]
+Player 2: [♦A, ♠10, ♣10, ♦10, ♣K, ♦K, ♦9, ♠7, ♦7, ♣9, ♥8, ♠8, ♥7, ♥10]
 All tests for the first half of the sample games have been passed successfully.The expected result for sample games of the second half are not disclosed.
 
 	Test basic functionality of playRound(): 0/25
 	  java.lang.AssertionError: We tested playRound() in the following situation:
-Player 1: [♦8, ♥10, ♦10, ♠8]
-Player 2: [♥8, ♠10, ♠7, ♥D]
+Player 1: [♦7, ♣K]
+Player 2: [♦A, ♥7]
 Your method resulted in the following situation
-Player 1: [♠8, ♦10, ♠7, ♦10, ♠7, ♦10, ♠7]
-Player 2: [♥D]
+Player 1: [♣K]
+Player 2: [♥7, ♦7, ♦A]
 while we expected:
-Player 1: [♠8, ♦8, ♥10, ♦10, ♥8, ♠10, ♠7]
-Player 2: [♥D]
+Player 1: [♣K]
+Player 2: [♥7, ♦A, ♦7]
 
 	Test the winner playRound() with some special games: 0/10
 	  java.lang.AssertionError: We tested playRound() in the following situation:
@@ -82,11 +79,11 @@ Player 1: [♠D, ♠B, ♦B, ♠10, ♦10, ♣9, ♦9, ♥K, ♠8, ♣K, ♦8, �
 Player 2: [♣D, ♣B, ♥B, ♣10, ♥10, ♥D, ♥9, ♦K, ♣8, ♠K, ♥8, ♠9, ♥A, ♣7, ♠A, ♥7]
 Your method resulted in the following situation
 Player 1: [♦9, ♥K, ♠8, ♣K, ♦8, ♦D, ♦A, ♠7, ♣A, ♦7]
-Player 2: [♥9, ♦K, ♣8, ♠K, ♥8, ♠9, ♥A, ♣7, ♠A, ♥7, ♥D, ♣9, ♥D, ♣9, ♥D, ♣9, ♥D, ♣9, ♥D, ♣9, ♥D, ♣9]
+Player 2: [♥9, ♦K, ♣8, ♠K, ♥8, ♠9, ♥A, ♣7, ♠A, ♥7, ♣9, ♣9, ♣9, ♣9, ♣9, ♣9, ♥D, ♥D, ♥D, ♥D, ♥D, ♥D]
 while we expected:
 Player 1: [♦9, ♥K, ♠8, ♣K, ♦8, ♦D, ♦A, ♠7, ♣A, ♦7]
 Player 2: [♥9, ♦K, ♣8, ♠K, ♥8, ♠9, ♥A, ♣7, ♠A, ♥7, ♣D, ♣B, ♥B, ♣10, ♥10, ♥D, ♠D, ♠B, ♦B, ♠10, ♦10, ♣9]
 
 Total points for Aufgabe 4.2: 0/70
 
-Total points: 15/100
+Total points: 30/100
