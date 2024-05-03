@@ -73,20 +73,32 @@ public class Bettelmann {
             openDeck2.addLast(closedPile2.removeFirst());
         } while (openDeck1.peekLast().compareTo(openDeck2.peekLast()) == 0);
         if (openDeck1.peekLast().compareTo(openDeck2.peekLast()) > 0) {
-            for (int i = 0; i < openDeck1.size(); i++) {
-                closedPile1.addLast(openDeck1.getLast());
+            while (!openDeck1.isEmpty()) {
+                closedPile1.addLast(openDeck1.removeLast());
             }
-            for (int i = 0; i < openDeck2.size(); i++) {
-                closedPile1.addLast(openDeck2.getLast());
+            while (!openDeck2.isEmpty()) {
+                closedPile1.addLast(openDeck2.removeLast());
             }
         }
         else {
-            for (int i = 0; i < openDeck1.size(); i++) {
-                closedPile2.addLast(openDeck1.getLast());
+            while (!openDeck1.isEmpty()) {
+                closedPile2.addLast(openDeck1.removeLast());
             }
-            for (int i = 0; i < openDeck2.size(); i++) {
-                closedPile2.addLast(openDeck2.getLast());
+            while (!openDeck2.isEmpty()) {
+                closedPile2.addLast(openDeck2.removeLast());
             }
+        }
+        if (closedPile1.isEmpty() && closedPile2.isEmpty()) {
+            this.winner = 0;
+            return;
+        }
+        else if (closedPile1.isEmpty()) {
+            this.winner = 2;
+            return;
+        }
+        else if (closedPile2.isEmpty()) {
+            this.winner = 1;
+            return;
         }
     }
 
