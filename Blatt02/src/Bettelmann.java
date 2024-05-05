@@ -69,8 +69,8 @@ public class Bettelmann {
                 this.winner = 1;
                 return;
             }
-            openDeck1.addLast(closedPile1.removeFirst());
-            openDeck2.addLast(closedPile2.removeFirst());
+            openDeck1.addFirst(closedPile1.removeFirst());
+            openDeck2.addFirst(closedPile2.removeFirst());
         } while (openDeck1.peekLast().compareTo(openDeck2.peekLast()) == 0);
         if (openDeck1.peekLast().compareTo(openDeck2.peekLast()) > 0) {
             while (!openDeck1.isEmpty()) {
