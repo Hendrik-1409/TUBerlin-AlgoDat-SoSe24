@@ -81,10 +81,10 @@ public class Bettelmann {
             }
         }
         else {
-            while (!openDeck1.isEmpty()) {
+            while (!openDeck2.isEmpty()) {
                 closedPile2.addLast(openDeck2.removeLast());
             }
-            while (!openDeck2.isEmpty()) {
+            while (!openDeck1.isEmpty()) {
                 closedPile2.addLast(openDeck1.removeLast());
             }
         }
