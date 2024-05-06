@@ -1,4 +1,4 @@
-datsose24,  05.05.2024, 14:20:41, f3cf5cace8c20cc622c3ed5041eb039165b5f42f
+datsose24,  06.05.2024, 02:21:29, ba14551c1ab473736e747b00067d9ffcd3fe6469
 Korrektur Blatt 2
 
 Aufgabe 3.1
@@ -18,8 +18,8 @@ Aufgabe 4.2
 Player 1: [♠K, ♣A, ♥K, ♦K, ♥7, ♦D, ♦A, ♦9, ♠B, ♠9, ♦8, ♣10, ♣8, ♥10, ♥D, ♥9]
 Player 2: [♣K, ♦7, ♦10, ♠D, ♠8, ♣B, ♣D, ♥A, ♥8, ♣7, ♠7, ♠A, ♥B, ♣9, ♦B, ♠10]
 Your method resulted in the following situation
-Player 1: [♥K, ♦K, ♥7, ♦D, ♦A, ♦9, ♠B, ♠9, ♦8, ♣10, ♣8, ♥10, ♥D, ♥9, ♣A, ♠K, ♦7, ♣K]
-Player 2: [♦10, ♠D, ♠8, ♣B, ♣D, ♥A, ♥8, ♣7, ♠7, ♠A, ♥B, ♣9, ♦B, ♠10]
+Player 1: []
+Player 2: []
 while we expected:
 Player 1: [♥K, ♦K, ♥7, ♦D, ♦A, ♦9, ♠B, ♠9, ♦8, ♣10, ♣8, ♥10, ♥D, ♥9, ♠K, ♣A, ♣K, ♦7]
 Player 2: [♦10, ♠D, ♠8, ♣B, ♣D, ♥A, ♥8, ♣7, ♠7, ♠A, ♥B, ♣9, ♦B, ♠10]
@@ -29,8 +29,8 @@ Player 2: [♦10, ♠D, ♠8, ♣B, ♣D, ♥A, ♥8, ♣7, ♠7, ♠A, ♥B, �
 Player 1: [♥A, ♦10, ♥D, ♣7, ♥K, ♦7, ♠9, ♥8, ♣B, ♥9, ♦K, ♦9, ♣A, ♥10]
 Player 2: [♠A, ♣10, ♣9, ♣8, ♣K, ♦B, ♠10, ♦8, ♠K, ♣D, ♠D, ♥B, ♠B, ♠7, ♦A, ♠8, ♦D, ♥7]
 Your method resulted in the following situation
-Player 1: [♣7, ♥K, ♦7, ♠9, ♥8, ♣B, ♥9, ♦K, ♦9, ♣A, ♥10, ♥D, ♦10, ♥A, ♣9, ♣10, ♠A]
-Player 2: [♣8, ♣K, ♦B, ♠10, ♦8, ♠K, ♣D, ♠D, ♥B, ♠B, ♠7, ♦A, ♠8, ♦D, ♥7]
+Player 1: []
+Player 2: [♦A, ♠8, ♦D, ♥7]
 All tests for the first half of the sample games have been passed successfully.The expected result for sample games of the second half are not disclosed.
 
 	Test the winner of  playRound() with several sample games 3: 0/5
@@ -38,8 +38,8 @@ All tests for the first half of the sample games have been passed successfully.T
 Player 1: [♥10, ♥9, ♠D, ♦8, ♦D, ♠B, ♦9, ♣8, ♣A, ♣9, ♥A, ♥8, ♣K, ♥7, ♦B, ♠8, ♠K, ♥D, ♣B, ♠10]
 Player 2: [♦10, ♦7, ♦K, ♥B, ♣10, ♠7, ♦A, ♠9, ♥K, ♣D, ♠A, ♣7]
 Your method resulted in the following situation
-Player 1: [♠D, ♦8, ♦D, ♠B, ♦9, ♣8, ♣A, ♣9, ♥A, ♥8, ♣K, ♥7, ♦B, ♠8, ♠K, ♥D, ♣B, ♠10, ♥9, ♥10, ♦7, ♦10]
-Player 2: [♦K, ♥B, ♣10, ♠7, ♦A, ♠9, ♥K, ♣D, ♠A, ♣7]
+Player 1: [♣K, ♥7, ♦B, ♠8, ♠K, ♥D, ♣B, ♠10]
+Player 2: []
 All tests for the first half of the sample games have been passed successfully.The expected result for sample games of the second half are not disclosed.
 
 	Test playRound() with several sample games: 0/10
@@ -47,8 +47,8 @@ All tests for the first half of the sample games have been passed successfully.T
 Player 1: [♠K, ♣A, ♥K, ♦K, ♥7, ♦D, ♦A, ♦9, ♠B, ♠9, ♦8, ♣10, ♣8, ♥10, ♥D, ♥9]
 Player 2: [♣K, ♦7, ♦10, ♠D, ♠8, ♣B, ♣D, ♥A, ♥8, ♣7, ♠7, ♠A, ♥B, ♣9, ♦B, ♠10]
 Your method resulted in the following situation
-Player 1: [♥K, ♦K, ♥7, ♦D, ♦A, ♦9, ♠B, ♠9, ♦8, ♣10, ♣8, ♥10, ♥D, ♥9, ♣A, ♠K, ♦7, ♣K]
-Player 2: [♦10, ♠D, ♠8, ♣B, ♣D, ♥A, ♥8, ♣7, ♠7, ♠A, ♥B, ♣9, ♦B, ♠10]
+Player 1: []
+Player 2: []
 while we expected:
 Player 1: [♥K, ♦K, ♥7, ♦D, ♦A, ♦9, ♠B, ♠9, ♦8, ♣10, ♣8, ♥10, ♥D, ♥9, ♠K, ♣A, ♣K, ♦7]
 Player 2: [♦10, ♠D, ♠8, ♣B, ♣D, ♥A, ♥8, ♣7, ♠7, ♠A, ♥B, ♣9, ♦B, ♠10]
@@ -58,8 +58,8 @@ Player 2: [♦10, ♠D, ♠8, ♣B, ♣D, ♥A, ♥8, ♣7, ♠7, ♠A, ♥B, �
 Player 1: [♣A, ♦9, ♥B, ♠7, ♠9, ♦7, ♥A, ♣9, ♠A, ♥8, ♠D, ♠8, ♥K, ♥10, ♥D, ♥7, ♦B, ♦8]
 Player 2: [♦A, ♠K, ♠10, ♥9, ♣8, ♣7, ♣K, ♣D, ♣B, ♣10, ♦K, ♠B, ♦D, ♦10]
 Your method resulted in the following situation
-Player 1: [♥B, ♠7, ♠9, ♦7, ♥A, ♣9, ♠A, ♥8, ♠D, ♠8, ♥K, ♥10, ♥D, ♥7, ♦B, ♦8]
-Player 2: [♠10, ♥9, ♣8, ♣7, ♣K, ♣D, ♣B, ♣10, ♦K, ♠B, ♦D, ♦10, ♠K, ♦A, ♦9, ♣A]
+Player 1: [♥D, ♥7, ♦B, ♦8]
+Player 2: []
 All tests for the first half of the sample games have been passed successfully.The expected result for sample games of the second half are not disclosed.
 
 	Test basic functionality of playRound(): 0/25
@@ -67,8 +67,8 @@ All tests for the first half of the sample games have been passed successfully.T
 Player 1: [♦8, ♥10, ♦10, ♠8]
 Player 2: [♥8, ♠10, ♠7, ♥D]
 Your method resulted in the following situation
-Player 1: [♠8, ♦10, ♥10, ♦8, ♠7, ♠10, ♥8]
-Player 2: [♥D]
+Player 1: []
+Player 2: []
 while we expected:
 Player 1: [♠8, ♦8, ♥10, ♦10, ♥8, ♠10, ♠7]
 Player 2: [♥D]
@@ -78,8 +78,8 @@ Player 2: [♥D]
 Player 1: [♠D, ♠B, ♦B, ♠10, ♦10, ♣9, ♦9, ♥K, ♠8, ♣K, ♦8, ♦D, ♦A, ♠7, ♣A, ♦7]
 Player 2: [♣D, ♣B, ♥B, ♣10, ♥10, ♥D, ♥9, ♦K, ♣8, ♠K, ♥8, ♠9, ♥A, ♣7, ♠A, ♥7]
 Your method resulted in the following situation
-Player 1: [♦9, ♥K, ♠8, ♣K, ♦8, ♦D, ♦A, ♠7, ♣A, ♦7]
-Player 2: [♥9, ♦K, ♣8, ♠K, ♥8, ♠9, ♥A, ♣7, ♠A, ♥7, ♥D, ♥10, ♣10, ♥B, ♣B, ♣D, ♣9, ♦10, ♠10, ♦B, ♠B, ♠D]
+Player 1: []
+Player 2: []
 while we expected:
 Player 1: [♦9, ♥K, ♠8, ♣K, ♦8, ♦D, ♦A, ♠7, ♣A, ♦7]
 Player 2: [♥9, ♦K, ♣8, ♠K, ♥8, ♠9, ♥A, ♣7, ♠A, ♥7, ♣D, ♣B, ♥B, ♣10, ♥10, ♥D, ♠D, ♠B, ♦B, ♠10, ♦10, ♣9]
