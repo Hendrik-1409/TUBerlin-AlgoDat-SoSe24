@@ -1,0 +1,31 @@
+datsose24,  07.05.2024, 14:23:11, e98b0c6e7f0e6f0a41a2cdbd59c24fb25b19ec85
+Korrektur Blatt 3
+
+Aufgabe 4.1
+	Checks Implementation of testPermutation: 0/15
+	  java.lang.RuntimeException: Testcase 3 Constructor: We would expect a failed assertion here.
+	Checks Implementation of testPermutation: 0/10
+	  java.lang.RuntimeException: Testcase 2 Constructor: We would expect a failed assertion here.
+	Checks Implementation of testPermutation: 0/10
+	  java.lang.RuntimeException: Testcase 4 Constructor: We would expect a failed assertion here.
+Total points for Aufgabe 4.1: 0/35
+
+Aufgabe 4.2
+	Checks Implementation of testDerangements: 0/9
+	  java.lang.RuntimeException: Testcase 3 Derangements: We would expect a failed assertion here.
+	Checks Implementation of testDerangements: 0/9
+	  java.lang.RuntimeException: Testcase 4 Derangements: We would expect a failed assertion here.
+	Checks Implementation of testDerangements: 0/8
+	  java.lang.RuntimeException: Testcase 1 Derangements: We would expect a failed assertion here.
+	Checks Implementation of testDerangements: 0/9
+	  java.lang.RuntimeException: Testcase 2 Derangements: We would expect a failed assertion here.
+Total points for Aufgabe 4.2: 0/35
+
+Aufgabe 4.3
+	Checks Implementation of testsameElements: 0/15
+	  java.lang.RuntimeException: Testcase 1 Elements: We would expect a failed assertion here. There are no elements to compare.
+	Checks Implementation of testsameElements: 0/15
+	  java.lang.RuntimeException: Testcase 4 Elements: We would expect a failed assertion here.
+Total points for Aufgabe 4.3: 0/30
+
+Total points: 0/100
