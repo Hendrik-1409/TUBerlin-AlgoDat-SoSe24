@@ -1,0 +1,67 @@
+datsose24,  14.05.2024, 14:21:45, ea91958d7efa4bebad736e69cf1d07a14016cfcc
+Korrektur Blatt 4
+
+Aufgabe 3.1
+	Setzt Board Constructor board.n für n = 1, ..., 10 korrekt?: 0/2
+	  java.lang.AssertionError: Nach Constructor Aufruf Board(1) ist für getN() expected [1] but found [0]
+	Liefert nach doMove() und undoMove() die Methode getField() das Erwartete?: 0/8
+	  java.lang.Error: Unresolved compilation problem: 
+	This method must return a result of type int
+
+	Liefert getField() für alle Positionen den von setField() gesetzten Wert?: 0/5
+	  java.lang.Error: Unresolved compilation problem: 
+	This method must return a result of type int
+
+	Lösen ungültige Positionen bei getField() eine Exception aus?: 0/2
+	  java.lang.Error: Unresolved compilation problem: 
+	This method must return a result of type int
+
+	Gibt isGameWon() in unterschiedlichen Spielsituationen das erwartete Ergebnis?: 0/8
+	  java.lang.Error: Unresolved compilation problem: 
+	This method must return a result of type boolean
+
+	Gibt Methode nFreeFields() für unterschiedliche Brettgrößen die richtige Antwort?: 0/4
+	  java.lang.Error: Unresolved compilation problem: 
+	This method must return a result of type int
+
+	Lösen ungültige Token-Werte bei setField() eine Exception aus?: 0/1
+	  java.lang.AssertionError: Bei setField(pos, -2) muss eine Exception geworfen werden.
+	Lösen ungültige Positionen bei setField() eine Exception aus?: 0/2
+	  java.lang.AssertionError: setField(pos, player) muss für pos = (-1, 0) eine Exception werfen.
+	Liefert validMoves() in unterschiedlichen Spielsituationen das erwartete Ergebnis?: 0/8
+	  java.lang.Error: Unresolved compilation problem: 
+	This method must return a result of type Iterable<Position>
+
+Total points for Aufgabe 3.1: 0/40
+
+Aufgabe 3.2
+	Liefert alphaBeta() in komplexen Stellungen die erwartete Bewertung?: 0/20
+	  java.lang.Error: Unresolved compilation problem: 
+	This method must return a result of type int
+
+	Liefert alphaBeta() in direkten Verluststellungen die erwartete Bewertung?: 0/10
+	  java.lang.Error: Unresolved compilation problem: 
+	This method must return a result of type int
+
+	Liefert alphaBeta() in regellosen Anfangsstellungen die erwartete Bewertung?: 0/3
+	  java.lang.Error: Unresolved compilation problem: 
+	This method must return a result of type int
+
+	Liefert alphaBeta() in komplexen Stellungen die erwartete Bewertung?: 0/7
+	  java.lang.Error: Unresolved compilation problem: 
+	This method must return a result of type int
+
+	Liefert alphaBeta() in direkten Gewinnstellungen die erwartete Bewertung?: 0/10
+	  java.lang.Error: Unresolved compilation problem: 
+	This method must return a result of type int
+
+Total points for Aufgabe 3.2: 0/50
+
+Aufgabe 3.3
+	Gibt evaluatePossibleMoves() in unterschiedlichen Spielsituationen das erwartete Ausgabe?: 0/3
+	  java.util.NoSuchElementException: No line found
+	Gibt evaluatePossibleMoves() in unterschiedlichen Spielsituationen das erwartete Ausgabe?: 0/7
+	  java.util.NoSuchElementException: No line found
+Total points for Aufgabe 3.3: 0/10
+
+Total points: 0/100
