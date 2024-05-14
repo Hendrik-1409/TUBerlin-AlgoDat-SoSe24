@@ -1,13 +1,13 @@
-datsose24,  07.05.2024, 14:23:11, e98b0c6e7f0e6f0a41a2cdbd59c24fb25b19ec85
+datsose24,  15.05.2024, 00:25:36, 613313ae3697575432a8c3a130ee7926bbecb5bb
 Korrektur Blatt 3
 
 Aufgabe 4.1
 	Checks Implementation of testPermutation: 0/15
-	  java.lang.RuntimeException: Testcase 3 Constructor: We would expect a failed assertion here.
+	  java.lang.RuntimeException: Testcase 0: The test did not assert correctly, even though the method works.
 	Checks Implementation of testPermutation: 0/10
-	  java.lang.RuntimeException: Testcase 2 Constructor: We would expect a failed assertion here.
+	  java.lang.RuntimeException: Testcase 0: The test did not assert correctly, even though the method works.
 	Checks Implementation of testPermutation: 0/10
-	  java.lang.RuntimeException: Testcase 4 Constructor: We would expect a failed assertion here.
+	  java.lang.RuntimeException: Testcase 0: The test did not assert correctly, even though the method works.
 Total points for Aufgabe 4.1: 0/35
 
 Aufgabe 4.2
