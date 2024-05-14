@@ -23,7 +23,30 @@ class PermutationTest {
 	@Test
 	void testPermutation() {
 		initialize();
-		// TODO
+		PermutationVariation[] cases = new PermutationVariation[] {p1, p2};
+		int[] allN = new int[] {n1, n2};
+		testPermutationGeneral(cases, allN);
+	}
+
+	void testPermutationGeneral(PermutationVariation[] cases, int[] allN) {
+		for (int i = 0; i < allN.length; i++) {
+			int n = allN[i];
+			PermutationVariation p = cases[i];
+			if (p.original.length == n) {
+				for (int elementOfOriginal = 0; elementOfOriginal < p.original.length; elementOfOriginal++) {
+					if (elementOfOriginal == 0) {
+						continue;
+					}
+					if (!(p.original[elementOfOriginal] > p.original[elementOfOriginal - 1])) {
+						assert false;
+					}					
+				}
+				if (p.allDerangements.equals(new LinkedList<int[]>())) {
+					assert true;					
+				}
+			}
+			assert false;
+		}
 	}
 
 	@Test
