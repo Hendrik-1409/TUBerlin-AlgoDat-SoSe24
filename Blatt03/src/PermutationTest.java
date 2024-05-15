@@ -32,20 +32,16 @@ class PermutationTest {
 		for (int i = 0; i < allN.length; i++) {
 			int n = allN[i];
 			PermutationVariation p = cases[i];
-			if (p.original.length == n) {
-				for (int elementOfOriginal = 0; elementOfOriginal < p.original.length; elementOfOriginal++) {
-					if (elementOfOriginal == 0) {
+			assert p.original.length == n : "Error - Die Folge der Permutation hat nicht die richtige Länge";
+			assert p.allDerangements.isEmpty() : "Error - allDerangements sollte leer sein";
+			for (int j = 0; j < p.original.length; j++) {
+				for (int j2 = 0; j2 < p.original.length; j2++) {
+					if (j == j2) {
 						continue;
 					}
-					if (!(p.original[elementOfOriginal] > p.original[elementOfOriginal - 1])) {
-						assert false;
-					}					
-				}
-				if (p.allDerangements.equals(new LinkedList<int[]>())) {
-					assert true;					
+					assert !(p.original[j] == p.original[j2]) : "Error - Ein Element sollte nur einmal vorkommen";
 				}
 			}
-			assert false;
 		}
 	}
 
