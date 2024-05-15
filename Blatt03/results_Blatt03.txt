@@ -1,14 +1,12 @@
-datsose24,  15.05.2024, 00:25:36, 613313ae3697575432a8c3a130ee7926bbecb5bb
+datsose24,  15.05.2024, 12:24:07, a9ba93b11a89557cab19846610cfdf42bd47ea0d
 Korrektur Blatt 3
 
 Aufgabe 4.1
-	Checks Implementation of testPermutation: 0/15
-	  java.lang.RuntimeException: Testcase 0: The test did not assert correctly, even though the method works.
+	Checks Implementation of testPermutation: 15/15
+	Checks Implementation of testPermutation: 10/10
 	Checks Implementation of testPermutation: 0/10
-	  java.lang.RuntimeException: Testcase 0: The test did not assert correctly, even though the method works.
-	Checks Implementation of testPermutation: 0/10
-	  java.lang.RuntimeException: Testcase 0: The test did not assert correctly, even though the method works.
-Total points for Aufgabe 4.1: 0/35
+	   java.lang.NullPointerException in PermutationTest.testPermutationGeneral(PermutationTest.java:36)
+Total points for Aufgabe 4.1: 25/35
 
 Aufgabe 4.2
 	Checks Implementation of testDerangements: 0/9
@@ -28,4 +26,4 @@ Aufgabe 4.3
 	  java.lang.RuntimeException: Testcase 4 Elements: We would expect a failed assertion here.
 Total points for Aufgabe 4.3: 0/30
 
-Total points: 0/100
+Total points: 25/100
