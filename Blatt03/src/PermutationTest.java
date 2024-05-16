@@ -33,7 +33,8 @@ class PermutationTest {
 			int n = allN[i];
 			PermutationVariation p = cases[i];
 			assert p.original.length == n : "Error - Die Folge der Permutation hat nicht die richtige Länge";
-			assert p.allDerangements.isEmpty() : "Error - allDerangements sollte leer sein";
+			assert p.allDerangements != null : "Error - allDerangements sollte nicht null sein";
+			assert p.allDerangements.equals(new LinkedList<int[]>()) : "Error - allDerangements sollte leer sein";
 			for (int j = 0; j < p.original.length; j++) {
 				for (int j2 = 0; j2 < p.original.length; j2++) {
 					if (j == j2) {
@@ -68,6 +69,12 @@ class PermutationTest {
 		}
 	}
 
+	/**
+	 * A method to calculate the subfactorial of a given integer.
+	 *
+	 * @param  n  the integer for which subfactorial is calculated
+	 * @return    the subfactorial value of the input integer
+	 */
 	int  subfakultät(int n) {
 		int result = 0;
 		for (int i = 0; i < n; i++) {
@@ -77,6 +84,12 @@ class PermutationTest {
 		return result;
 	}
 
+	/**
+	 * A method to calculate the factorial of a given integer.
+	 *
+	 * @param  n  the integer for which factorial is calculated
+	 * @return    the factorial value of the input integer
+	 */
 	int fakultät(int n) {
 		int result = 1;
 		for (int i = 1; i <= n; i++) {
