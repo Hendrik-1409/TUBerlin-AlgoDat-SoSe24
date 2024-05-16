@@ -133,6 +133,7 @@ class PermutationTest {
 	void testsameElementsGeneral(PermutationVariation[] cases) {
 		for (int i = 0; i < cases.length; i++) {
 			PermutationVariation p = cases[i];
+			assert !(p.allDerangements.isEmpty()) : "Error - allDerangements sollte nicht leer sein";
 			for (int[] thisDerangement : p.allDerangements) {
 				for (int j = 0; j < thisDerangement.length; j++) {
 					boolean searchHelper = false;
