@@ -85,7 +85,7 @@ class PermutationTest {
 			assert p.allDerangements.size() == subfakultät(n) : "Error - Anzahl der Permutationen stimmt nicht";
 			for (int[] thisDerangement : p.allDerangements) {
 				for (int j = 0; j < thisDerangement.length; j++) {
-					assert thisDerangement[j] != p.original[j] : "Error - ein Element darf vnicht an der selben stelle sein - fixpunktkriterium nicht erfuellt";
+					assert thisDerangement[j] != p.original[j] : "Error - ein Element darf nicht an der selben stelle sein - fixpunktkriterium nicht erfuellt";
 				}
 			}
 		}
@@ -126,7 +126,32 @@ class PermutationTest {
 		initialize();
 		//in case there is something wrong with the constructor
 		fixConstructor();
-		// TODO
+		PermutationVariation[] cases = new PermutationVariation[] {p1, p2};
+		testsameElementsGeneral(cases);
+	}
+
+	void testsameElementsGeneral(PermutationVariation[] cases) {
+		for (int i = 0; i < cases.length; i++) {
+			PermutationVariation p = cases[i];
+			for (int[] thisDerangement : p.allDerangements) {
+				for (int j = 0; j < thisDerangement.length; j++) {
+					boolean searchHelper = false;
+					for (int k = 0; k < p.original.length; k++) {
+						if (thisDerangement[j] == p.original[k]) {
+							searchHelper = true;
+							break;
+						}
+					}
+					assert searchHelper : "Error - Element nicht in Originalliste gefunden";
+					for (int k = 0; k < thisDerangement.length; k++) {
+						if (j == k) {
+							continue;
+						}
+						assert thisDerangement[j] != thisDerangement[k] : "Error - Ein Element darf nicht zeimal vorkommen";
+					}
+				}
+			}
+		}
 	}
 	
 	/**
