@@ -74,7 +74,7 @@ class PermutationTest {
 		//in case there is something wrong with the constructor
 		fixConstructor();
 		PermutationVariation[] cases = new PermutationVariation[] {p1, p2};
-		int[] allN = new int[] {n1, n2};
+		int[] allN = new int[] {n2, n1};
 		testDerangementsGeneral(cases, allN);
 	}
 
@@ -82,7 +82,8 @@ class PermutationTest {
 		for (int i = 0; i < allN.length; i++) {
 			int n = allN[i];
 			PermutationVariation p = cases[i];
-			assert p.allDerangements.size() == subfakultät(n) : "Error - Anzahl der Permutationen stimmt nicht";
+			System.out.println(n + " - " + subfakultät(n) + " - " + fakultät(n));
+			assert p.allDerangements.size() == subfakultät(n) - 1 : "Error - Anzahl der Permutationen stimmt nicht";
 			for (int[] thisDerangement : p.allDerangements) {
 				for (int j = 0; j < thisDerangement.length; j++) {
 					assert thisDerangement[j] != p.original[j] : "Error - ein Element darf nicht an der selben stelle sein - fixpunktkriterium nicht erfuellt";
@@ -99,12 +100,14 @@ class PermutationTest {
 	 * @return    the subfactorial value of the input integer
 	 */
 	int  subfakultät(int n) {
-		int result = 0;
-		for (int i = 0; i < n; i++) {
+		System.out.println("New subfakultät:" + n);
+		double result = 0;
+		for (int i = 0; i <= n; i++) {
 			result += Math.pow(-1, i) / fakultät(i);
+			System.out.println(result + " - " + i);
 		}
 		result *= fakultät(n);
-		return result;
+		return (int) Math.round(result);
 	}
 
 	/**
