@@ -1,4 +1,4 @@
-datsose24,  17.05.2024, 10:31:03, 34fa96172bf47164115ec43c3c62941399321b1c
+datsose24,  17.05.2024, 12:28:15, 38548ed6e0a5838e49e3c4ebcde78b51db30baf2
 Korrektur Blatt 3
 
 Aufgabe 4.1
@@ -8,21 +8,15 @@ Aufgabe 4.1
 Total points for Aufgabe 4.1: 35/35
 
 Aufgabe 4.2
-	Checks Implementation of testDerangements: 0/9
-	  java.lang.RuntimeException: Testcase 0: The test did not assert correctly, even though the method works.
-	Checks Implementation of testDerangements: 0/9
-	  java.lang.RuntimeException: Testcase 0: The test did not assert correctly, even though the method works.
-	Checks Implementation of testDerangements: 0/8
-	  java.lang.RuntimeException: Testcase 0: The test did not assert correctly, even though the method works.
-	Checks Implementation of testDerangements: 0/9
-	  java.lang.RuntimeException: Testcase 0: The test did not assert correctly, even though the method works.
-Total points for Aufgabe 4.2: 0/35
+	Checks Implementation of testDerangements: 9/9
+	Checks Implementation of testDerangements: 9/9
+	Checks Implementation of testDerangements: 8/8
+	Checks Implementation of testDerangements: 9/9
+Total points for Aufgabe 4.2: 35/35
 
 Aufgabe 4.3
-	Checks Implementation of testsameElements: 0/15
-	  java.lang.RuntimeException: Testcase 0: The test did not assert correctly, even though the method works.
-	Checks Implementation of testsameElements: 0/15
-	  java.lang.RuntimeException: Testcase 2: The test did not assert correctly, even though the elements are the same.
-Total points for Aufgabe 4.3: 0/30
+	Checks Implementation of testsameElements: 15/15
+	Checks Implementation of testsameElements: 15/15
+Total points for Aufgabe 4.3: 30/30
 
-Total points: 35/100
+Total points: 100/100
