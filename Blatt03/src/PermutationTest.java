@@ -82,7 +82,7 @@ class PermutationTest {
 		for (int i = 0; i < allN.length; i++) {
 			int n = allN[i];
 			PermutationVariation p = cases[i];
-			assert p.allDerangements.size() == subfakultät(n) - 1 : "Error - Anzahl der Permutationen stimmt nicht";
+			assert p.allDerangements.size() == subfakultät(n): "Error - Anzahl der Permutationen stimmt nicht";
 			for (int[] thisDerangement : p.allDerangements) {
 				for (int j = 0; j < thisDerangement.length; j++) {
 					assert thisDerangement[j] != p.original[j] : "Error - ein Element darf nicht an der selben stelle sein - fixpunktkriterium nicht erfuellt";
@@ -127,7 +127,7 @@ class PermutationTest {
 		//in case there is something wrong with the constructor
 		fixConstructor();
 		PermutationVariation[] cases = new PermutationVariation[] {p1, p2};
-		int[] allN = new int[] {n2, n1};
+		int[] allN = new int[] {n1, n2};
 		testDerangementsGeneral(cases, allN);
 		testsameElementsGeneral(cases);
 	}
