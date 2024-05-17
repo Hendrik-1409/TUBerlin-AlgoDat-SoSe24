@@ -9,7 +9,7 @@ class PermutationTest {
 	PermutationVariation p2;
 	public int n1;
 	public int n2;
-	int cases=1;
+	int cases=0;
 	
 	void initialize() {
 		n1=4;
@@ -82,6 +82,7 @@ class PermutationTest {
 		for (int i = 0; i < allN.length; i++) {
 			int n = allN[i];
 			PermutationVariation p = cases[i];
+			p.derangements();
 			assert p.allDerangements.size() == subfakultät(n): "Error - Anzahl der Permutationen stimmt nicht";
 			for (int[] thisDerangement : p.allDerangements) {
 				for (int j = 0; j < thisDerangement.length; j++) {
@@ -135,6 +136,7 @@ class PermutationTest {
 	void testsameElementsGeneral(PermutationVariation[] cases) {
 		for (int i = 0; i < cases.length; i++) {
 			PermutationVariation p = cases[i];
+			p.derangements();
 			assert !(p.allDerangements.isEmpty()) : "Error - allDerangements sollte nicht leer sein";
 			for (int[] thisDerangement : p.allDerangements) {
 				for (int j = 0; j < thisDerangement.length; j++) {
