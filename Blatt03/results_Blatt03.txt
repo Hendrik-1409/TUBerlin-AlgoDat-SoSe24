@@ -1,4 +1,4 @@
-datsose24,  16.05.2024, 12:28:19, c2230e45731d16cedc2e99b4e7a2c9ca3844a8ba
+datsose24,  17.05.2024, 10:31:03, 34fa96172bf47164115ec43c3c62941399321b1c
 Korrektur Blatt 3
 
 Aufgabe 4.1
@@ -9,13 +9,13 @@ Total points for Aufgabe 4.1: 35/35
 
 Aufgabe 4.2
 	Checks Implementation of testDerangements: 0/9
-	  java.lang.RuntimeException: Testcase 3 Derangements: We would expect a failed assertion here.
+	  java.lang.RuntimeException: Testcase 0: The test did not assert correctly, even though the method works.
 	Checks Implementation of testDerangements: 0/9
-	  java.lang.RuntimeException: Testcase 4 Derangements: We would expect a failed assertion here.
+	  java.lang.RuntimeException: Testcase 0: The test did not assert correctly, even though the method works.
 	Checks Implementation of testDerangements: 0/8
-	  java.lang.RuntimeException: Testcase 1 Derangements: We would expect a failed assertion here.
+	  java.lang.RuntimeException: Testcase 0: The test did not assert correctly, even though the method works.
 	Checks Implementation of testDerangements: 0/9
-	  java.lang.RuntimeException: Testcase 2 Derangements: We would expect a failed assertion here.
+	  java.lang.RuntimeException: Testcase 0: The test did not assert correctly, even though the method works.
 Total points for Aufgabe 4.2: 0/35
 
 Aufgabe 4.3
