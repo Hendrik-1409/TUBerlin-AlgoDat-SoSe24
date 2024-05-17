@@ -102,7 +102,6 @@ class PermutationTest {
 		double result = 0;
 		for (int i = 0; i <= n; i++) {
 			result += Math.pow(-1, i) / fakultät(i);
-			System.out.println(result + " - " + i);
 		}
 		result *= fakultät(n);
 		return (int) Math.round(result);
