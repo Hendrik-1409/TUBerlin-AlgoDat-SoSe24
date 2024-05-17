@@ -74,7 +74,7 @@ class PermutationTest {
 		//in case there is something wrong with the constructor
 		fixConstructor();
 		PermutationVariation[] cases = new PermutationVariation[] {p1, p2};
-		int[] allN = new int[] {n2, n1};
+		int[] allN = new int[] {n1, n2};
 		testDerangementsGeneral(cases, allN);
 	}
 
