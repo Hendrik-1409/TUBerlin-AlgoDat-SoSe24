@@ -2,10 +2,17 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 class BoardTest {
+	Board board;
+	int n;
+
+	void init() {
+		n = 5;
+		board = new Board(this.n);
+	}
 
 	@Test
 	void testBoard() {
-		fail("Not yet implemented");
+		init();
 	}
 
 	@Test
@@ -50,9 +57,8 @@ class BoardTest {
 
 	@Test
 	void testPrint() {
-		fail("Not yet implemented");
+		init();
+		board.print();
 	}
 
 }
-
-
