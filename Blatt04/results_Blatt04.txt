@@ -1,47 +1,42 @@
-datsose24,  17.05.2024, 12:05:51, 7ba899a68ccb83a1ffb68d81b71a0118b966a192
+datsose24,  22.05.2024, 00:22:32, 7174ff73f852db1c93b6aa300de9fbbcbb944b99
 Korrektur Blatt 4
 
 Aufgabe 3.1
-	Setzt Board Constructor board.n für n = 1, ..., 10 korrekt?: 0/2
-	  java.lang.AssertionError: Nach Constructor Aufruf Board(1) ist für getN() expected [1] but found [0]
+	Setzt Board Constructor board.n für n = 1, ..., 10 korrekt?: 2/2
+	Liefert getField() für alle Positionen den von setField() gesetzten Wert?: 5/5
+	Lösen ungültige Positionen bei getField() eine Exception aus?: 2/2
+	Lösen ungültige Token-Werte bei setField() eine Exception aus?: 1/1
+	Lösen ungültige Positionen bei setField() eine Exception aus?: 2/2
 	Liefert nach doMove() und undoMove() die Methode getField() das Erwartete?: 0/8
-	  java.lang.Error: Unresolved compilation problem: 
-	This method must return a result of type int
-
-	Liefert getField() für alle Positionen den von setField() gesetzten Wert?: 0/5
-	  java.lang.Error: Unresolved compilation problem: 
-	This method must return a result of type int
-
-	Lösen ungültige Positionen bei getField() eine Exception aus?: 0/2
-	  java.lang.Error: Unresolved compilation problem: 
-	This method must return a result of type int
+	  java.lang.Error: Unresolved compilation problems: 
+	Unhandled exception type Exception
+	Unhandled exception type Exception
+	Unhandled exception type Exception
 
 	Gibt isGameWon() in unterschiedlichen Spielsituationen das erwartete Ergebnis?: 0/8
-	  java.lang.Error: Unresolved compilation problem: 
-	This method must return a result of type boolean
-
+	   java.lang.NullPointerException in Board.isGameWon(Board.java:85)
 	Gibt Methode nFreeFields() für unterschiedliche Brettgrößen die richtige Antwort?: 0/4
-	  java.lang.Error: Unresolved compilation problem: 
-	This method must return a result of type int
-
-	Lösen ungültige Token-Werte bei setField() eine Exception aus?: 0/1
-	  java.lang.AssertionError: Bei setField(pos, -2) muss eine Exception geworfen werden.
-	Lösen ungültige Positionen bei setField() eine Exception aus?: 0/2
-	  java.lang.AssertionError: setField(pos, player) muss für pos = (-1, 0) eine Exception werfen.
+	  java.lang.AssertionError: nFreeFields sollte nach dem Wegnehmen eines Steins erhöht werden. Für nFreeFields ist expected [9] but found [7]
 	Liefert validMoves() in unterschiedlichen Spielsituationen das erwartete Ergebnis?: 0/8
 	  java.lang.Error: Unresolved compilation problem: 
-	This method must return a result of type Iterable<Position>
+	Unhandled exception type Exception
 
-Total points for Aufgabe 3.1: 0/40
+Total points for Aufgabe 3.1: 12/40
 
 Aufgabe 3.2
 	Liefert alphaBeta() in komplexen Stellungen die erwartete Bewertung?: 0/20
-	  java.lang.Error: Unresolved compilation problem: 
-	This method must return a result of type int
+	  java.lang.Error: Unresolved compilation problems: 
+	Unhandled exception type Exception
+	Unhandled exception type Exception
+	Unhandled exception type Exception
+	Unhandled exception type Exception
+	Unhandled exception type Exception
+	Unhandled exception type Exception
+	Unhandled exception type Exception
 
 	Liefert alphaBeta() in direkten Verluststellungen die erwartete Bewertung?: 0/10
 	  java.lang.Error: Unresolved compilation problem: 
-	This method must return a result of type int
+	Unhandled exception type Exception
 
 	Liefert alphaBeta() in regellosen Anfangsstellungen die erwartete Bewertung?: 0/3
 	  java.lang.Error: Unresolved compilation problem: 
@@ -53,15 +48,27 @@ Aufgabe 3.2
 
 	Liefert alphaBeta() in direkten Gewinnstellungen die erwartete Bewertung?: 0/10
 	  java.lang.Error: Unresolved compilation problem: 
-	This method must return a result of type int
+	Unhandled exception type Exception
 
 Total points for Aufgabe 3.2: 0/50
 
 Aufgabe 3.3
 	Gibt evaluatePossibleMoves() in unterschiedlichen Spielsituationen das erwartete Ausgabe?: 0/3
-	  java.util.NoSuchElementException: No line found
+	  java.lang.Error: Unresolved compilation problems: 
+	Unhandled exception type Exception
+	Unhandled exception type Exception
+	Unhandled exception type Exception
+	Unhandled exception type Exception
+	Unhandled exception type Exception
+
 	Gibt evaluatePossibleMoves() in unterschiedlichen Spielsituationen das erwartete Ausgabe?: 0/7
-	  java.util.NoSuchElementException: No line found
+	  java.lang.Error: Unresolved compilation problems: 
+	Unhandled exception type Exception
+	Unhandled exception type Exception
+	Unhandled exception type Exception
+	Unhandled exception type Exception
+	Unhandled exception type Exception
+
 Total points for Aufgabe 3.3: 0/10
 
-Total points: 0/100
+Total points: 12/100
