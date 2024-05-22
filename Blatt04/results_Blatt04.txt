@@ -1,4 +1,4 @@
-datsose24,  22.05.2024, 00:22:32, 7174ff73f852db1c93b6aa300de9fbbcbb944b99
+datsose24,  23.05.2024, 00:24:26, 280967f1905ac735d67dd8e5ea43f9a075cf6096
 Korrektur Blatt 4
 
 Aufgabe 3.1
@@ -14,9 +14,9 @@ Aufgabe 3.1
 	Unhandled exception type Exception
 
 	Gibt isGameWon() in unterschiedlichen Spielsituationen das erwartete Ergebnis?: 0/8
-	   java.lang.NullPointerException in Board.isGameWon(Board.java:85)
+	  java.lang.AssertionError: Bei leerem Spielfeld muss isGameWon() falsch sein. did not expect to find [false] but found [true]
 	Gibt Methode nFreeFields() für unterschiedliche Brettgrößen die richtige Antwort?: 0/4
-	  java.lang.AssertionError: nFreeFields sollte nach dem Wegnehmen eines Steins erhöht werden. Für nFreeFields ist expected [9] but found [7]
+	  java.lang.AssertionError: nFreeFields sollte nach dem Vertauschen eines Steins nicht verändert werden. Für nFreeFields ist expected [8] but found [7]
 	Liefert validMoves() in unterschiedlichen Spielsituationen das erwartete Ergebnis?: 0/8
 	  java.lang.Error: Unresolved compilation problem: 
 	Unhandled exception type Exception
