@@ -56,8 +56,13 @@ public class Board {
         if (pos.x < 0 || pos.y < 0 || pos.x >= this.n || pos.y >= this.n || (token != -1 && token != 1 && token != 0)) {
             throw new InputMismatchException();
         }
+        if (token != this.board[pos.x][pos.y] && token != 0) {
+            this.freeFields--;
+        }
+        else if (token != this.board[pos.x][pos.y] && token == 0) {
+            this.freeFields++;
+        }
         this.board[pos.x][pos.y] = token;
-        this.freeFields--;
     }
 
     /**
@@ -82,26 +87,37 @@ public class Board {
      * @return true if game is won, false if not
      */
     public boolean isGameWon() {
-        int player = this.board[this.lastMove.x][this.lastMove.y];
-        boolean r0 = true;
-        boolean r1 = true;
-        boolean r2 = true;
-        boolean r3 = true;
+        boolean rx = true;
+        boolean x1 = true;
+        boolean x2 = true;
+        int comparex = this.board[0][0];
+        int comparex1 = this.board[0][0];
+        int comparex2 = this.board[this.n - 1][0];
         for (int i = 0; i < this.n; i++) {
-            if (this.board[i][lastMove.y] != player) {
-                r0 = false;
+            boolean thisy = true;
+            int camparey = this.board[i][0];
+            for (int j = 0; j < this.n; j++) {
+                if (camparey != this.board[i][j]) {
+                    thisy = false;
+                }
+                if (j == i && this.board[i][j] != comparex1) {
+                    x1 = false;
+                }
+                if (this.n - 1 - j == i && this.board[i][this.n - 1 - j] != comparex2) {
+                    x2 = false;
+                }
             }
-            if (this.board[lastMove.x][i] != player) {
-                r1 = false;
+            if (thisy) {
+                return true;
             }
-            if (this.board[i][i] != player) {
-                r2 = false;
+            if (this.board[i][0] != comparex) {
+                rx = false;
             }
-            if (this.board[i][this.n - i - 1] != player) {
-                r3 = false;
-            }
-        } 
-        return (r0 || r1 || r2 || r3);
+        }
+        if (rx || x1 || x2) {
+            return true;
+        }
+        return false;
     }
 
     /**
