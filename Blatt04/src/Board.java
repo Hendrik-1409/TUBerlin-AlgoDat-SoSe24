@@ -68,9 +68,9 @@ public class Board {
     /**
      * Places the token of a player at Position pos.
      */
-    public void doMove(Position pos, int player) throws Exception {
+    public void doMove(Position pos, int player) throws InputMismatchException {
         if (this.board[pos.x][pos.y] != 0) {
-            throw new Exception("Position is not free");
+            throw new InputMismatchException();
         }
         this.setField(pos, player);
         this.lastMove = pos;
