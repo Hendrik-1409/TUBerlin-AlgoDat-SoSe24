@@ -93,6 +93,13 @@ public class Board {
         int comparex = this.board[0][0];
         int comparex1 = this.board[0][0];
         int comparex2 = this.board[this.n - 1][0];
+        if (this.board[0][0] == 0) {
+            rx = false;
+            x1 = false;
+        }
+        if (this.board[this.n - 1][0] == 0) {
+            x2 = false;
+        }
         for (int i = 0; i < this.n; i++) {
             boolean thisy = true;
             int camparey = this.board[i][0];
