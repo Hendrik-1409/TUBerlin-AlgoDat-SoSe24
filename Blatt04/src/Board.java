@@ -56,7 +56,7 @@ public class Board {
         if (pos.x < 0 || pos.y < 0 || pos.x >= this.n || pos.y >= this.n || (token != -1 && token != 1 && token != 0)) {
             throw new InputMismatchException();
         }
-        if (token != this.board[pos.x][pos.y] && token != 0) {
+        if (token != this.board[pos.x][pos.y] && token != 0 && this.board[pos.x][pos.y] != 0) {
             this.freeFields--;
         }
         else if (token != this.board[pos.x][pos.y] && token == 0) {
