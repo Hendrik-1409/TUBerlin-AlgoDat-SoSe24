@@ -1,3 +1,5 @@
+import java.util.LinkedList;
+
 /**
  * This class implements and evaluates game situations of a TicTacToe game.
  */
@@ -10,10 +12,33 @@ public class TicTacToe {
      * @param board     current Board object for game situation
      * @param player    player who has a turn
      * @return          rating of game situation from player's point of view
+     * 
+     * https://stackoverflow.com/questions/6416706/easy-way-to-convert-iterable-to-collection
     **/
     public static int alphaBeta(Board board, int player)
     {
-        // TODO
+        return alphaBeta(board, player, Integer.MIN_VALUE, Integer.MAX_VALUE, board.nFreeFields());
+    }
+
+    public static int alphaBeta(Board board, int player, int alpha, int beta, int depth) {
+        if (board.isGameWon()) {
+            return -(board.nFreeFields() + 1);
+        }
+        else if (depth == 0) {
+            return 0;
+        }
+        for (Position pos : board.validMoves()) {
+            board.doMove(pos, player);
+            int value = -alphaBeta(board, -player, -beta, -alpha, depth - 1);
+            board.undoMove(pos);
+            if (value >= beta) {
+                return value;  // Beta cut-off.
+            }
+            if (value > alpha) {
+                alpha = value;  // Update alpha.
+            }
+        }
+        return alpha;
     }
 
     
