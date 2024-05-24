@@ -1,3 +1,5 @@
+import static java.lang.Math.max;
+
 import java.util.LinkedList;
 
 /**
@@ -17,7 +19,7 @@ public class TicTacToe {
     **/
     public static int alphaBeta(Board board, int player)
     {
-        return alphaBeta(board, player, 0, 0, board.nFreeFields());
+        return alphaBeta(board, player, Integer.MIN_VALUE, Integer.MAX_VALUE, board.nFreeFields());
     }
 
     public static int alphaBeta(Board board, int player, int alpha, int beta, int depth) {
@@ -27,21 +29,24 @@ public class TicTacToe {
         else if (depth == 0) {
             return 0;
         }
+        int value = Integer.MIN_VALUE;
+        if (depth + 1 < alpha) {
+            return alpha;
+        }
         for (Position pos : board.validMoves()) {
             if (depth < alpha) {
                 break;
             }
             board.doMove(pos, player);
-            int value = -alphaBeta(board, -player, -beta, -alpha, depth - 1);
+            board.print();
+            value = max(value,-alphaBeta(board, -player, -beta, -alpha, depth - 1));
             board.undoMove(pos);
-            if (value <= beta && value < -alpha) {
-                break;  // Beta cut-off.
+            if (value >= beta) {
+                break;
             }
-            if (value > alpha && value > 0) {
-                alpha = value;  // Update alpha.
-            }
+            alpha = max(alpha, value);
         }
-        return alpha;
+        return value;
     }
 
     
@@ -62,10 +67,14 @@ public class TicTacToe {
     public static void main(String[] args)
     {
         TicTacToe game = new TicTacToe();
-        Board board = new Board(2);
-        //board.doMove(new Position(0, 0), 1);
+        Board board = new Board(3);
+        board.doMove(new Position(0, 0), 1);
+        board.doMove(new Position(2, 0), 1);
+        board.doMove(new Position(1, 1), 1);
+        board.doMove(new Position(0, 1), -1);
+        board.doMove(new Position(2, 2), -1);
         board.print();
-        System.out.println(game.alphaBeta(board, 1));
+        System.out.println(game.alphaBeta(board, -1));
     }
 }
 
