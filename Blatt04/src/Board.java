@@ -87,14 +87,11 @@ public class Board {
      * @return true if game is won, false if not
      */
     public boolean isGameWon() {
-        boolean rx = true;
         boolean x1 = true;
         boolean x2 = true;
-        int comparex = this.board[0][0];
         int comparex1 = this.board[0][0];
         int comparex2 = this.board[this.n - 1][0];
         if (this.board[0][0] == 0) {
-            rx = false;
             x1 = false;
         }
         if (this.board[this.n - 1][0] == 0) {
@@ -106,9 +103,17 @@ public class Board {
             if (this.board[i][0] == 0) {
                 thisy = false;
             }
+            boolean thisx = true;
+            int camparex = this.board[i][0];
+            if (this.board[i][0] == 0) {
+                thisx = false;
+            }
             for (int j = 0; j < this.n; j++) {
                 if (camparey != this.board[i][j]) {
                     thisy = false;
+                }
+                if (camparex != this.board[i][j]) {
+                    thisx = false;
                 }
                 if (j == i && this.board[i][j] != comparex1) {
                     x1 = false;
@@ -117,14 +122,11 @@ public class Board {
                     x2 = false;
                 }
             }
-            if (thisy) {
+            if (thisy || thisx) {
                 return true;
             }
-            if (this.board[i][0] != comparex) {
-                rx = false;
-            }
         }
-        if (rx || x1 || x2) {
+        if (x1 || x2) {
             return true;
         }
         return false;
