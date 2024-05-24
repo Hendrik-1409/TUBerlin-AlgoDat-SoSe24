@@ -34,11 +34,7 @@ public class TicTacToe {
             return alpha;
         }
         for (Position pos : board.validMoves()) {
-            if (depth < alpha) {
-                break;
-            }
             board.doMove(pos, player);
-            board.print();
             value = max(value,-alphaBeta(board, -player, -beta, -alpha, depth - 1));
             board.undoMove(pos);
             if (value >= beta) {
@@ -73,8 +69,9 @@ public class TicTacToe {
         board.doMove(new Position(1, 1), 1);
         board.doMove(new Position(0, 1), -1);
         board.doMove(new Position(2, 2), -1);
+        board.doMove(new Position(0, 2), -1);
         board.print();
-        System.out.println(game.alphaBeta(board, -1));
+        System.out.println(game.alphaBeta(board, 1));
     }
 }
 
