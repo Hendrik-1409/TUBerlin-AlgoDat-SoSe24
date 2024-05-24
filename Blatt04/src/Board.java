@@ -113,7 +113,7 @@ public class Board {
                 if (j == i && this.board[i][j] != comparex1) {
                     x1 = false;
                 }
-                if (this.n - 1 - j == i && this.board[i][this.n - 1 - j] != comparex2) {
+                if (this.n - 1 - j == i && this.board[i][j] != comparex2) {
                     x2 = false;
                 }
             }
