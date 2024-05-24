@@ -1,4 +1,4 @@
-datsose24,  23.05.2024, 12:22:34, 1bf88453adfad8515d9e5df7eb36533637e67b75
+datsose24,  24.05.2024, 12:24:45, e5edcdcff35cb18468193dab5e4574fcd73efb8b
 Korrektur Blatt 4
 
 Aufgabe 3.1
@@ -6,47 +6,31 @@ Aufgabe 3.1
 	Liefert nach doMove() und undoMove() die Methode getField() das Erwartete?: 8/8
 	Liefert getField() für alle Positionen den von setField() gesetzten Wert?: 5/5
 	Lösen ungültige Positionen bei getField() eine Exception aus?: 2/2
+	Gibt isGameWon() in unterschiedlichen Spielsituationen das erwartete Ergebnis?: 8/8
+	Gibt Methode nFreeFields() für unterschiedliche Brettgrößen die richtige Antwort?: 4/4
 	Lösen ungültige Token-Werte bei setField() eine Exception aus?: 1/1
 	Lösen ungültige Positionen bei setField() eine Exception aus?: 2/2
 	Liefert validMoves() in unterschiedlichen Spielsituationen das erwartete Ergebnis?: 8/8
-	Gibt isGameWon() in unterschiedlichen Spielsituationen das erwartete Ergebnis?: 0/8
-	  java.lang.AssertionError: Bei leerem Spielfeld muss isGameWon() falsch sein. did not expect to find [false] but found [true]
-	Gibt Methode nFreeFields() für unterschiedliche Brettgrößen die richtige Antwort?: 0/4
-	  java.lang.AssertionError: nFreeFields sollte nach dem Setzen eines Steins verringert werden. Für nFreeFields ist expected [8] but found [9]
-Total points for Aufgabe 3.1: 28/40
+Total points for Aufgabe 3.1: 40/40
 
 Aufgabe 3.2
+	Liefert alphaBeta() in direkten Verluststellungen die erwartete Bewertung?: 10/10
+	Liefert alphaBeta() in komplexen Stellungen die erwartete Bewertung?: 7/7
+	Liefert alphaBeta() in direkten Gewinnstellungen die erwartete Bewertung?: 10/10
 	Liefert alphaBeta() in komplexen Stellungen die erwartete Bewertung?: 0/20
 	  java.lang.AssertionError: Bei der Spielsituation
 ...
 ...
 ...
-wird Bewertung 0 erwartet. expected [0] but found [-10]
-	Liefert alphaBeta() in direkten Verluststellungen die erwartete Bewertung?: 0/10
-	  java.lang.AssertionError: Bei der Spielsituation
-x.x
-ox.
-..o
-wird Bewertung -3 erwartet. expected [-3] but found [-10]
+wird Bewertung 0 erwartet. expected [0] but found [3]
 	Liefert alphaBeta() in regellosen Anfangsstellungen die erwartete Bewertung?: 0/3
 	  java.lang.AssertionError: Bei der Spielsituation
 xx..
 x...
 ....
 ....
-wird Bewertung 5 erwartet. expected [5] but found [-17]
-	Liefert alphaBeta() in komplexen Stellungen die erwartete Bewertung?: 0/7
-	  java.lang.AssertionError: Bei der Spielsituation
-..
-..
-wird Bewertung 2 erwartet. expected [2] but found [-5]
-	Liefert alphaBeta() in direkten Gewinnstellungen die erwartete Bewertung?: 0/10
-	  java.lang.AssertionError: Bei der Spielsituation
-x.x
-ox.
-o.o
-wird Bewertung 3 erwartet. expected [3] but found [18]
-Total points for Aufgabe 3.2: 0/50
+wird Bewertung 5 erwartet. expected [5] but found [0]
+Total points for Aufgabe 3.2: 27/50
 
 Aufgabe 3.3
 	Gibt evaluatePossibleMoves() in unterschiedlichen Spielsituationen das erwartete Ausgabe?: 0/3
@@ -55,4 +39,4 @@ Aufgabe 3.3
 	  java.util.NoSuchElementException: No line found
 Total points for Aufgabe 3.3: 0/10
 
-Total points: 28/100
+Total points: 67/100
