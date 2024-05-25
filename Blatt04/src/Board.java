@@ -100,19 +100,19 @@ public class Board {
         for (int i = 0; i < this.n; i++) {
             boolean thisy = true;
             int camparey = this.board[i][0];
-            if (this.board[i][0] == 0) {
+            if (camparey == 0) {
                 thisy = false;
             }
             boolean thisx = true;
-            int camparex = this.board[i][0];
-            if (this.board[i][0] == 0) {
+            int camparex = this.board[0][i];
+            if (camparex == 0) {
                 thisx = false;
             }
             for (int j = 0; j < this.n; j++) {
                 if (camparey != this.board[i][j]) {
                     thisy = false;
                 }
-                if (camparex != this.board[i][j]) {
+                if (camparex != this.board[j][i]) {
                     thisx = false;
                 }
                 if (j == i && this.board[i][j] != comparex1) {
