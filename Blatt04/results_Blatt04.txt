@@ -1,4 +1,4 @@
-datsose24,  25.05.2024, 12:24:01, cbfac61229e70b95ba115c0400e729f57528ca9c
+datsose24,  27.05.2024, 00:28:50, 3822df5ab8a4980da7685a03fb3ce7b5ebe1fa24
 Korrektur Blatt 4
 
 Aufgabe 3.1
@@ -14,23 +14,53 @@ Aufgabe 3.1
 Total points for Aufgabe 3.1: 40/40
 
 Aufgabe 3.2
+	Liefert alphaBeta() in komplexen Stellungen die erwartete Bewertung?: 20/20
 	Liefert alphaBeta() in direkten Verluststellungen die erwartete Bewertung?: 10/10
-	Liefert alphaBeta() in regellosen Anfangsstellungen die erwartete Bewertung?: 3/3
 	Liefert alphaBeta() in komplexen Stellungen die erwartete Bewertung?: 7/7
 	Liefert alphaBeta() in direkten Gewinnstellungen die erwartete Bewertung?: 10/10
-	Liefert alphaBeta() in komplexen Stellungen die erwartete Bewertung?: 0/20
-	  java.lang.AssertionError: Bei der Spielsituation
-...
-...
-...
-wird Bewertung 0 erwartet. expected [0] but found [3]
-Total points for Aufgabe 3.2: 30/50
+	Liefert alphaBeta() in regellosen Anfangsstellungen die erwartete Bewertung?: 0/3
+	  org.testng.internal.thread.ThreadTimeoutException: Method TicTacToeKorrektur.testAlphaBetaNoRules() didn't finish within the time-out 3000
+Total points for Aufgabe 3.2: 47/50
 
 Aufgabe 3.3
 	Gibt evaluatePossibleMoves() in unterschiedlichen Spielsituationen das erwartete Ausgabe?: 0/3
-	  java.util.NoSuchElementException: No line found
+	  java.lang.AssertionError: Auf die Eingabe
+.o.
+...
+..x
+wird folgende Ausgabe erwartet:
+
+Evaluation for player 'x':
+  0  o  3
+  0  3 -2
+  3  0  x
+
+aber es kam:
+
+Evaluation for player 'x':
+0 0 3 
+o 3 0 
+3 -2 x 
+
 	Gibt evaluatePossibleMoves() in unterschiedlichen Spielsituationen das erwartete Ausgabe?: 0/7
-	  java.util.NoSuchElementException: No line found
+	  java.lang.AssertionError: Auf die Eingabe
+.o.
+...
+..x
+wird folgende Ausgabe erwartet:
+
+Evaluation for player 'x':
+  0  o  3
+  0  3 -2
+  3  0  x
+
+aber es kam:
+
+Evaluation for player 'x':
+0 0 3 
+o 3 0 
+3 -2 x 
+
 Total points for Aufgabe 3.3: 0/10
 
-Total points: 70/100
+Total points: 87/100
