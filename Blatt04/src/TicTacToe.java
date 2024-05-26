@@ -54,18 +54,40 @@ public class TicTacToe {
     **/
     public static void evaluatePossibleMoves(Board board, int player)
     {
-        // TODO
+        if (board.isGameWon()) {
+            System.out.println("Game is over");
+            return;
+        }
+        if (player == 1) {
+            System.out.println("Evaluation for player 'x':");
+        } else {
+            System.out.println("Evaluation for player 'o':");
+        }
+        for (int x = 0; x < board.getN(); x++) {
+            for (int y = 0; y < board.getN(); y++) {
+                Position pos = new Position(x, y);
+                if (board.getField(pos) == 1) {
+                    System.out.print("x ");
+                } else if (board.getField(pos) == -1) {
+                    System.out.print("o ");
+                } else {
+                    board.doMove(pos, player);
+                    System.out.print(-alphaBeta(board, -player) + " ");
+                    board.undoMove(pos);
+                }
+            }
+            System.out.print("\n");
+        }
     }
 
     public static void main(String[] args)
     {
         TicTacToe game = new TicTacToe();
         Board board = new Board(3);
-        /*board.doMove(new Position(0, 0), 1);
-        board.doMove(new Position(1, 0), 1);
-        board.doMove(new Position(0, 1), 1);*/
+        board.doMove(new Position(2, 2), 1);
+        board.doMove(new Position(0, 1), -1);
         board.print();
-        System.out.println(TicTacToe.alphaBeta(board, 1));
+        TicTacToe.evaluatePossibleMoves(board, -1);
     }
 }
 
