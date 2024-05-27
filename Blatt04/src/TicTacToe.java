@@ -33,7 +33,7 @@ public class TicTacToe {
                 return alpha;
             }
             board.doMove(pos, player);
-            if (board.nFreeFields() <= (board.getN()*board.getN()) - board.getN() && gameWon(board, pos)) {
+            if (gameWon(board, pos)) {
                 value = Math.max(value, (board.nFreeFields() + 1));
             } else if (depth == 1) {
                 value = Math.max(value, 0);

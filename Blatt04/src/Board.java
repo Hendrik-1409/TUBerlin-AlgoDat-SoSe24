@@ -137,8 +137,8 @@ public class Board {
         LinkedList<Position> positions = new LinkedList<Position>();
         for (int i = 0; i < this.n; i++) {
             for (int j = 0; j < this.n; j++) {
-                if (this.board[i][j] == 0) {
-                    positions.addLast(new Position(i, j));
+                if (this.board[j][i] == 0) {
+                    positions.addLast(new Position(j, i));
                 }
             }
         }
