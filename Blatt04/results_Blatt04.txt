@@ -1,4 +1,4 @@
-datsose24,  27.05.2024, 00:28:50, 3822df5ab8a4980da7685a03fb3ce7b5ebe1fa24
+datsose24,  27.05.2024, 12:28:00, bd91a20614b787040e5015ba6036d020f7f4c7e2
 Korrektur Blatt 4
 
 Aufgabe 3.1
@@ -23,44 +23,8 @@ Aufgabe 3.2
 Total points for Aufgabe 3.2: 47/50
 
 Aufgabe 3.3
-	Gibt evaluatePossibleMoves() in unterschiedlichen Spielsituationen das erwartete Ausgabe?: 0/3
-	  java.lang.AssertionError: Auf die Eingabe
-.o.
-...
-..x
-wird folgende Ausgabe erwartet:
+	Gibt evaluatePossibleMoves() in unterschiedlichen Spielsituationen das erwartete Ausgabe?: 3/3
+	Gibt evaluatePossibleMoves() in unterschiedlichen Spielsituationen das erwartete Ausgabe?: 7/7
+Total points for Aufgabe 3.3: 10/10
 
-Evaluation for player 'x':
-  0  o  3
-  0  3 -2
-  3  0  x
-
-aber es kam:
-
-Evaluation for player 'x':
-0 0 3 
-o 3 0 
-3 -2 x 
-
-	Gibt evaluatePossibleMoves() in unterschiedlichen Spielsituationen das erwartete Ausgabe?: 0/7
-	  java.lang.AssertionError: Auf die Eingabe
-.o.
-...
-..x
-wird folgende Ausgabe erwartet:
-
-Evaluation for player 'x':
-  0  o  3
-  0  3 -2
-  3  0  x
-
-aber es kam:
-
-Evaluation for player 'x':
-0 0 3 
-o 3 0 
-3 -2 x 
-
-Total points for Aufgabe 3.3: 0/10
-
-Total points: 87/100
+Total points: 97/100
