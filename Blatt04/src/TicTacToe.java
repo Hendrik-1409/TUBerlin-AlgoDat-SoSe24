@@ -32,7 +32,7 @@ public class TicTacToe {
         }
         int value = Integer.MIN_VALUE;
         for (Position pos : board.validMoves()) {
-            if (depth < alpha) {
+            if (depth <= alpha) {
                 return alpha;
             }
             board.doMove(pos, player);
@@ -83,10 +83,13 @@ public class TicTacToe {
 
     public static void main(String[] args)
     {
-        Board board = new Board(4);
-        board.doMove(new Position(0, 0), 1);
-        board.doMove(new Position(0, 1), 1);
-        board.doMove(new Position(1, 0), 1);
+        Board board = new Board(2);
+        /*board.doMove(new Position(0, 0), 1);
+        board.doMove(new Position(1, 1), 1);
+        board.doMove(new Position(2, 0), 1);
+        board.doMove(new Position(0, 1), -1);
+        board.doMove(new Position(2, 2), -1);
+        board.doMove(new Position(0, 2), -1);*/
         board.print();
         System.out.println(TicTacToe.alphaBeta(board, 1));
     }
