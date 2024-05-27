@@ -1,4 +1,5 @@
 import static java.lang.Math.max;
+import static java.lang.Math.scalb;
 
 import java.util.LinkedList;
 
@@ -31,7 +32,7 @@ public class TicTacToe {
         }
         int value = Integer.MIN_VALUE;
         for (Position pos : board.validMoves()) {
-            if (depth <= alpha) {
+            if (depth < alpha) {
                 return alpha;
             }
             board.doMove(pos, player);
@@ -63,8 +64,8 @@ public class TicTacToe {
         } else {
             System.out.println("Evaluation for player 'o':");
         }
-        for (int x = 0; x < board.getN(); x++) {
-            for (int y = 0; y < board.getN(); y++) {
+        for (int y = 0; y < board.getN(); y++) {
+            for (int x = 0; x < board.getN(); x++) {
                 Position pos = new Position(x, y);
                 if (board.getField(pos) == 1) {
                     System.out.print("x ");
@@ -82,12 +83,12 @@ public class TicTacToe {
 
     public static void main(String[] args)
     {
-        TicTacToe game = new TicTacToe();
-        Board board = new Board(3);
-        board.doMove(new Position(2, 2), 1);
-        board.doMove(new Position(0, 1), -1);
+        Board board = new Board(4);
+        board.doMove(new Position(0, 0), 1);
+        board.doMove(new Position(0, 1), 1);
+        board.doMove(new Position(1, 0), 1);
         board.print();
-        TicTacToe.evaluatePossibleMoves(board, -1);
+        System.out.println(TicTacToe.alphaBeta(board, 1));
     }
 }
 
