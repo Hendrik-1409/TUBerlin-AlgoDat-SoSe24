@@ -11,7 +11,6 @@ public class Board {
     private int n;
     private int[][] board;
     private int freeFields;
-    private Position lastMove;
 
     /**
      * Creates Board object, am game board of size n * n with 1<=n<=10.
@@ -73,7 +72,6 @@ public class Board {
             throw new InputMismatchException();
         }*/
         this.setField(pos, player);
-        this.lastMove = pos;
     }
 
     /**
@@ -137,8 +135,8 @@ public class Board {
      */
     public Iterable<Position> validMoves() {
         LinkedList<Position> positions = new LinkedList<Position>();
-        for (int i = 0; i < this.board.length; i++) {
-            for (int j = 0; j < this.board[i].length; j++) {
+        for (int i = 0; i < this.n; i++) {
+            for (int j = 0; j < this.n; j++) {
                 if (this.board[i][j] == 0) {
                     positions.addLast(new Position(i, j));
                 }
