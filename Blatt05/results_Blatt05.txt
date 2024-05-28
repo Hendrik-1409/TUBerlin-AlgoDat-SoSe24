@@ -1,0 +1,64 @@
+datsose24,  29.05.2024, 00:23:39, 8b628595b216a90ec9901f11f7fd367b805e6b6f
+Korrektur Blatt 5
+
+Aufgabe 2.1
+	Liefert maxGainRecursive() die richtige Lösung für die Beispielspiele?: 0/7
+	  java.lang.Error: Unresolved compilation problem: 
+	This method must return a result of type int
+
+	Liefert maxGainRecursive() die richtige Lösung für kurze Zufallsspiele?: 0/18
+	  java.lang.Error: Unresolved compilation problem: 
+	This method must return a result of type int
+
+Total points for Aufgabe 2.1: 0/25
+
+Aufgabe 2.2
+	Liefert maxGain() die richtige Lösung für lange Zufallsspiele?: 0/14
+	  java.lang.Error: Unresolved compilation problem: 
+	This method must return a result of type int
+
+	Hat maxGain() (maximal) quadratischen Speicherbedarf?: 0/5
+	  java.lang.Error: Unresolved compilation problem: 
+	This method must return a result of type int
+
+	Liefert maxGain() die richtige Lösung für die Beispielspiele?: 0/7
+	  java.lang.Error: Unresolved compilation problem: 
+	This method must return a result of type int
+
+	Liefert maxGain() die richtige Lösung für kurze Zufallsspiele?: 0/14
+	  java.lang.Error: Unresolved compilation problem: 
+	This method must return a result of type int
+
+Total points for Aufgabe 2.2: 0/40
+
+Aufgabe 2.3
+	Liefert optimalSequence() eine richtige Lösung für zufällige Spiele?: 0/28
+	  java.lang.Error: Unresolved compilation problem: 
+	This method must return a result of type int
+
+	Liefert optimalSequence() eine richtige Lösung für die Beispielspiele?: 0/7
+	  java.lang.Error: Unresolved compilation problem: 
+	This method must return a result of type int
+
+Total points for Aufgabe 2.3: 0/35
+
+Aufgabe 3.1
+	Benutzt optBottomUp() einen Zähler vom Typ long?: 0/0
+	  java.lang.Error: Unresolved compilation problem: 
+	This method must return a result of type long
+
+	Liefert optBottomUp() die richtige Lösung für die großen Beispiele?: 0/0
+	  java.lang.Error: Unresolved compilation problem: 
+	This method must return a result of type long
+
+	Liefert optBottomUp() die richtige Lösung für die mittleren Beispiele?: 0/0
+	  java.lang.Error: Unresolved compilation problem: 
+	This method must return a result of type long
+
+	Liefert optBottomUp() die richtige Lösung für die kleinen Beispiele?: 0/0
+	  java.lang.Error: Unresolved compilation problem: 
+	This method must return a result of type long
+
+Total points for Aufgabe 3.1: 0/0
+
+Total points: 0/100
