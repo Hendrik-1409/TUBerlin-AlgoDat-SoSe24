@@ -37,9 +37,9 @@ public class RowOfBowls {
         for (int i : values) {
             bowels.add(i);
         }
-        int result = maxGainRecursive(bowels, 0, 0)[0];
+        int result[] = maxGainRecursive(bowels, 0, 0);
         System.err.println(bowels.toString() + result);
-        return result;
+        return result[0] - result[1];
     }
 
     private int[] maxGainRecursive(LinkedList<Integer> bowels, int player1, int player2) {
