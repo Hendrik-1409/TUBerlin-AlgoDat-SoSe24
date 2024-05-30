@@ -1,44 +1,28 @@
-datsose24,  29.05.2024, 00:23:39, 8b628595b216a90ec9901f11f7fd367b805e6b6f
+datsose24,  31.05.2024, 00:22:31, 934e72805c11ad072f1698d23fb1b272b2d82e6d
 Korrektur Blatt 5
 
 Aufgabe 2.1
-	Liefert maxGainRecursive() die richtige Lösung für die Beispielspiele?: 0/7
-	  java.lang.Error: Unresolved compilation problem: 
-	This method must return a result of type int
-
-	Liefert maxGainRecursive() die richtige Lösung für kurze Zufallsspiele?: 0/18
-	  java.lang.Error: Unresolved compilation problem: 
-	This method must return a result of type int
-
-Total points for Aufgabe 2.1: 0/25
+	Liefert maxGainRecursive() die richtige Lösung für die Beispielspiele?: 7/7
+	Liefert maxGainRecursive() die richtige Lösung für kurze Zufallsspiele?: 18/18
+Total points for Aufgabe 2.1: 25/25
 
 Aufgabe 2.2
+	Liefert maxGain() die richtige Lösung für die Beispielspiele?: 7/7
+	Liefert maxGain() die richtige Lösung für kurze Zufallsspiele?: 14/14
 	Liefert maxGain() die richtige Lösung für lange Zufallsspiele?: 0/14
-	  java.lang.Error: Unresolved compilation problem: 
-	This method must return a result of type int
-
+	  org.testng.internal.thread.ThreadTimeoutException: Method RowOfBowlsKorrektur.testMaxGainLongRandomSequences() didn't finish within the time-out 3000
 	Hat maxGain() (maximal) quadratischen Speicherbedarf?: 0/5
-	  java.lang.Error: Unresolved compilation problem: 
-	This method must return a result of type int
-
-	Liefert maxGain() die richtige Lösung für die Beispielspiele?: 0/7
-	  java.lang.Error: Unresolved compilation problem: 
-	This method must return a result of type int
-
-	Liefert maxGain() die richtige Lösung für kurze Zufallsspiele?: 0/14
-	  java.lang.Error: Unresolved compilation problem: 
-	This method must return a result of type int
-
-Total points for Aufgabe 2.2: 0/40
+	  org.testng.internal.thread.ThreadTimeoutException: Method RowOfBowlsKorrektur.testMaxGainMemoryConsumption() didn't finish within the time-out 3000
+Total points for Aufgabe 2.2: 21/40
 
 Aufgabe 2.3
 	Liefert optimalSequence() eine richtige Lösung für zufällige Spiele?: 0/28
 	  java.lang.Error: Unresolved compilation problem: 
-	This method must return a result of type int
+	This method must return a result of type Iterable<Integer>
 
 	Liefert optimalSequence() eine richtige Lösung für die Beispielspiele?: 0/7
 	  java.lang.Error: Unresolved compilation problem: 
-	This method must return a result of type int
+	This method must return a result of type Iterable<Integer>
 
 Total points for Aufgabe 2.3: 0/35
 
@@ -61,4 +45,4 @@ Aufgabe 3.1
 
 Total points for Aufgabe 3.1: 0/0
 
-Total points: 0/100
+Total points: 46/100
