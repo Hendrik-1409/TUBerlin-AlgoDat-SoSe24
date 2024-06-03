@@ -1,4 +1,4 @@
-datsose24,  31.05.2024, 12:24:50, 8460d85afddc6538e8980cf6443e75616e842282
+datsose24,  04.06.2024, 00:32:25, e4b25156c6005d81006d719e20856d35ca117cd5
 Korrektur Blatt 5
 
 Aufgabe 2.1
@@ -7,24 +7,16 @@ Aufgabe 2.1
 Total points for Aufgabe 2.1: 25/25
 
 Aufgabe 2.2
+	Liefert maxGain() die richtige Lösung für lange Zufallsspiele?: 14/14
+	Hat maxGain() (maximal) quadratischen Speicherbedarf?: 5/5
 	Liefert maxGain() die richtige Lösung für die Beispielspiele?: 7/7
 	Liefert maxGain() die richtige Lösung für kurze Zufallsspiele?: 14/14
-	Liefert maxGain() die richtige Lösung für lange Zufallsspiele?: 0/14
-	  org.testng.internal.thread.ThreadTimeoutException: Method RowOfBowlsKorrektur.testMaxGainLongRandomSequences() didn't finish within the time-out 3000
-	Hat maxGain() (maximal) quadratischen Speicherbedarf?: 0/5
-	  org.testng.internal.thread.ThreadTimeoutException: Method RowOfBowlsKorrektur.testMaxGainMemoryConsumption() didn't finish within the time-out 3000
-Total points for Aufgabe 2.2: 21/40
+Total points for Aufgabe 2.2: 40/40
 
 Aufgabe 2.3
-	Liefert optimalSequence() eine richtige Lösung für zufällige Spiele?: 0/28
-	  java.lang.Error: Unresolved compilation problem: 
-	This method must return a result of type Iterable<Integer>
-
-	Liefert optimalSequence() eine richtige Lösung für die Beispielspiele?: 0/7
-	  java.lang.Error: Unresolved compilation problem: 
-	This method must return a result of type Iterable<Integer>
-
-Total points for Aufgabe 2.3: 0/35
+	Liefert optimalSequence() eine richtige Lösung für zufällige Spiele?: 28/28
+	Liefert optimalSequence() eine richtige Lösung für die Beispielspiele?: 7/7
+Total points for Aufgabe 2.3: 35/35
 
 Aufgabe 3.1
 	Benutzt optBottomUp() einen Zähler vom Typ long?: 0/0
@@ -45,4 +37,4 @@ Aufgabe 3.1
 
 Total points for Aufgabe 3.1: 0/0
 
-Total points: 46/100
+Total points: 100/100
