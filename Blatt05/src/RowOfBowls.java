@@ -62,7 +62,9 @@ public class RowOfBowls {
 -        return result[0] - result[1];*/
     }
 
-    /*private int[] maxGain(int[] bowels, int player1, int player2) {
+    /*
+    this function was reformated and rewritten by CoediumAI and ChatGPT. Ultimatly Abandoned 
+    private int[] maxGain(int[] bowels, int player1, int player2) {
         int[] result, result2;
         System.out.println("maxGain called with position " + position[0] + ", " + position[1]);
         if (solutionMatrix[position[0]][position[1]][0] == 0 &&
