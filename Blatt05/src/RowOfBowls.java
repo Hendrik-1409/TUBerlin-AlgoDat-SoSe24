@@ -63,7 +63,7 @@ public class RowOfBowls {
     }
 
     /*
-    this function was reformated and rewritten by CoediumAI and ChatGPT. Ultimatly Abandoned 
+    this function was reformated and rewritten multiple times by CoediumAI and ChatGPT in desparity. Ultimatly Abandoned for new concept above, after rethinking the undelying algorithm. (Aktive code has no AI contributions)s
     private int[] maxGain(int[] bowels, int player1, int player2) {
         int[] result, result2;
         System.out.println("maxGain called with position " + position[0] + ", " + position[1]);
