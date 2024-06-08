@@ -27,11 +27,48 @@ public class RandomDepthFirstPaths {
 	    
     // depth first search from v
     private void randomDFS(Graph G, int v) {
-		// TODO
+      marked[v] = true;
+        // Iterate through all the adjacent vertices of the current vertex
+        for (int w : G.adj(v)) {
+            if (!marked[w]) {
+                // Mark the edge to the adjacent vertex as traversed
+                edgeTo[w] = v;
+                // Continue the depth-first search from the adjacent vertex
+                randomDFS(G, w);
+            }
+        }
     }
     
     public void randomNonrecursiveDFS(Graph G) {
-		// TODO
+      marked = new boolean[G.V()];
+        // to be able to iterate over each adjacency list, keeping track of which
+        // vertex in each adjacency list needs to be explored next
+        Iterator<Integer>[] adj = (Iterator<Integer>[]) new Iterator[G.V()];
+        for (int v = 0; v < G.V(); v++) {
+            adj[v] = G.adj(v).iterator();
+        }
+
+        // depth-first search using an explicit stack
+        Stack<Integer> stack = new Stack<Integer>();
+        marked[s] = true;
+        stack.push(s);
+        while (!stack.isEmpty()) {
+            int v = stack.peek();
+            if (adj[v].hasNext()) {
+                int w = adj[v].next();
+                if (!marked[w]) {
+                    // discovered vertex w for the first time
+                    marked[w] = true;
+                    edgeTo[w] = v;
+                    stack.push(w);
+                    
+                }
+            }
+            else {
+                stack.pop();
+            }
+
+        }
     }
 
     /**

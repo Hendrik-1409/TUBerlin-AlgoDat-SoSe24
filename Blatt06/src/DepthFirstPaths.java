@@ -88,7 +88,6 @@ public class DepthFirstPaths {
         postorder.add(v);
     }
     public void nonrecursiveDFS(Graph G) {
-    	//TODO: Zeilen hinzufuegen
         marked = new boolean[G.V()];
         // to be able to iterate over each adjacency list, keeping track of which
         // vertex in each adjacency list needs to be explored next
@@ -120,7 +119,6 @@ public class DepthFirstPaths {
                 stack.pop();
                 postorder.add(v);
             }
-
         }
     }
     /**
