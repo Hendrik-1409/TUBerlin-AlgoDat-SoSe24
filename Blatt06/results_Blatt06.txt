@@ -1,16 +1,12 @@
-datsose24,  29.05.2024, 17:18:56, 4055bd91eb0046a451441e4dc77146bece9dc112
+datsose24,  09.06.2024, 00:27:07, fb671dd3eb834d53cbfe6eac3b1b48ccaba5c04e
 Korrektur Blatt 6
 
 Aufgabe 3.1
-	Wird distTo richtig zugwiesen?: 0/4
-	  java.lang.AssertionError: The recursive solution does not work. did not expect to find [true] but found [false]
-	Wird edgeTo richtig zugwiesen?: 0/4
-	  java.lang.AssertionError: The recursive solution does not work. did not expect to find [true] but found [false]
-	Wird postorder richtig zugwiesen?: 0/5
-	  java.lang.AssertionError: The recursive solution does not work. did not expect to find [true] but found [false]
-	Wird preorder richtig zugwiesen?: 0/5
-	  java.lang.AssertionError: The recursive solution does not work. did not expect to find [true] but found [false]
-Total points for Aufgabe 3.1: 0/18
+	Wird distTo richtig zugwiesen?: 4/4
+	Wird edgeTo richtig zugwiesen?: 4/4
+	Wird postorder richtig zugwiesen?: 5/5
+	Wird preorder richtig zugwiesen?: 5/5
+Total points for Aufgabe 3.1: 18/18
 
 Aufgabe 3.2
 	Gibt die Methode pathTo, den richtigen Weg zurück?: 0/12
@@ -28,9 +24,9 @@ Total points for Aufgabe 3.3: 0/15
 
 Aufgabe 3.4
 	Checkt die Implementierung von randomNonrecursivedfs: 0/10
-	  java.lang.AssertionError: Edges is zero. did not expect to find [false] but found [true]
+	  java.lang.AssertionError: The DFS is not Random. did not expect to find [false] but found [true]
 	Checkt die Implementierung von randomdfs: 0/5
-	  java.lang.AssertionError: Edges is zero. did not expect to find [false] but found [true]
+	  java.lang.AssertionError: The DFS is not Random. did not expect to find [false] but found [true]
 Total points for Aufgabe 3.4: 0/15
 
 Aufgabe 3.5
@@ -51,4 +47,4 @@ Aufgabe 3.6
 
 Total points for Aufgabe 3.6: 0/30
 
-Total points: 0/100
+Total points: 18/100
