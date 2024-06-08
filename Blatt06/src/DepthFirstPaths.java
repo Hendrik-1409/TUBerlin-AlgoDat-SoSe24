@@ -63,15 +63,29 @@ public class DepthFirstPaths {
     	dfs(G, s);
     }
 
-    // depth first search from v
+    /**
+     * Performs a depth-first search of the graph starting from the given
+     * source vertex.
+     * @param G The graph to search
+     * @param v The source vertex
+     */
     private void dfs(Graph G, int v) {
-    	//TODO: Zeilen hinzufuegen
+        // Mark the current vertex as visited
+        preorder.add(v);
         marked[v] = true;
+        // Iterate through all the adjacent vertices of the current vertex
         for (int w : G.adj(v)) {
             if (!marked[w]) {
+                // Mark the edge to the adjacent vertex as traversed
+                edgeTo[w] = v;
+                // Increment the distance to the adjacent vertex
+                distTo[w] = distTo[v] + 1;
+                // Continue the depth-first search from the adjacent vertex
                 dfs(G, w);
             }
         }
+        // Mark the current vertex as visited in postorder
+        postorder.add(v);
     }
     public void nonrecursiveDFS(Graph G) {
     	//TODO: Zeilen hinzufuegen
@@ -79,8 +93,9 @@ public class DepthFirstPaths {
         // to be able to iterate over each adjacency list, keeping track of which
         // vertex in each adjacency list needs to be explored next
         Iterator<Integer>[] adj = (Iterator<Integer>[]) new Iterator[G.V()];
-        for (int v = 0; v < G.V(); v++)
+        for (int v = 0; v < G.V(); v++) {
             adj[v] = G.adj(v).iterator();
+        }
 
         // depth-first search using an explicit stack
         Stack<Integer> stack = new Stack<Integer>();
@@ -88,16 +103,21 @@ public class DepthFirstPaths {
         stack.push(s);
         while (!stack.isEmpty()) {
             int v = stack.peek();
+            preorder.add(v);
             if (adj[v].hasNext()) {
                 int w = adj[v].next();
                 if (!marked[w]) {
                     // discovered vertex w for the first time
                     marked[w] = true;
+                    edgeTo[w] = v;
+                    distTo[w] = distTo[v] + 1;
                     stack.push(w);
+                    
                 }
             }
             else {
                 stack.pop();
+                postorder.add(v);
             }
 
         }
