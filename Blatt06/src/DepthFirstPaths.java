@@ -100,15 +100,16 @@ public class DepthFirstPaths {
         // depth-first search using an explicit stack
         Stack<Integer> stack = new Stack<Integer>();
         marked[s] = true;
+        preorder.add(s);
         stack.push(s);
         while (!stack.isEmpty()) {
             int v = stack.peek();
-            preorder.add(v);
             if (adj[v].hasNext()) {
                 int w = adj[v].next();
                 if (!marked[w]) {
                     // discovered vertex w for the first time
                     marked[w] = true;
+                    preorder.add(w);
                     edgeTo[w] = v;
                     distTo[w] = distTo[v] + 1;
                     stack.push(w);
