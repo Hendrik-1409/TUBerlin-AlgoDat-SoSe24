@@ -1,4 +1,4 @@
-datsose24,  09.06.2024, 00:27:07, fb671dd3eb834d53cbfe6eac3b1b48ccaba5c04e
+datsose24,  10.06.2024, 00:30:51, 85dcd8d9488a6024e96c8c3aa1ecd0b061bf09b1
 Korrektur Blatt 6
 
 Aufgabe 3.1
@@ -9,11 +9,8 @@ Aufgabe 3.1
 Total points for Aufgabe 3.1: 18/18
 
 Aufgabe 3.2
-	Gibt die Methode pathTo, den richtigen Weg zurück?: 0/12
-	  java.lang.Error: Unresolved compilation problem: 
-	This method must return a result of type List<Integer>
-
-Total points for Aufgabe 3.2: 0/12
+	Gibt die Methode pathTo, den richtigen Weg zurück?: 12/12
+Total points for Aufgabe 3.2: 12/12
 
 Aufgabe 3.3
 	Checkt die Implementierung von mazegrid: 0/15
@@ -23,20 +20,15 @@ Aufgabe 3.3
 Total points for Aufgabe 3.3: 0/15
 
 Aufgabe 3.4
-	Checkt die Implementierung von randomNonrecursivedfs: 0/10
-	  java.lang.AssertionError: The DFS is not Random. did not expect to find [false] but found [true]
-	Checkt die Implementierung von randomdfs: 0/5
-	  java.lang.AssertionError: The DFS is not Random. did not expect to find [false] but found [true]
-Total points for Aufgabe 3.4: 0/15
+	Checkt die Implementierung von randomNonrecursivedfs: 10/10
+	Checkt die Implementierung von randomdfs: 5/5
+Total points for Aufgabe 3.4: 15/15
 
 Aufgabe 3.5
+	Checkt die Implementierung von hasEdge: 6/6
 	Checkt die Implementierung von addEdge: 0/4
-	  java.lang.AssertionError: addEdge funktioniert nicht. did not expect to find [true] but found [false]
-	Checkt die Implementierung von hasEdge: 0/6
-	  java.lang.Error: Unresolved compilation problem: 
-	This method must return a result of type boolean
-
-Total points for Aufgabe 3.5: 0/10
+	  java.lang.AssertionError: addEdge sollte nicht testen, ob Kanten bereits enthalten oder reflexiv  sind. did not expect to find [false] but found [true]
+Total points for Aufgabe 3.5: 6/10
 
 Aufgabe 3.6
 	Checkt die Implementierung von buildMaze: 0/20
@@ -47,4 +39,4 @@ Aufgabe 3.6
 
 Total points for Aufgabe 3.6: 0/30
 
-Total points: 18/100
+Total points: 51/100
