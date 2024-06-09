@@ -143,7 +143,13 @@ public class DepthFirstPaths {
      * This method is different compared to the original one.
      */
     public List<Integer> pathTo(int v) {
-		// TODO
+		LinkedList<Integer> output = new LinkedList<Integer>();
+        if (!hasPathTo(v)) return null;
+        for (int x = v; distTo[x] != 0; x = edgeTo[x]) {
+            output.addLast(x);
+        }
+        output.addLast(s);
+        return output;
     }
     
     /**

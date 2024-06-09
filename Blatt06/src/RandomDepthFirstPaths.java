@@ -1,5 +1,6 @@
 import java.util.Collections;
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Stack;
 
@@ -93,7 +94,13 @@ public class RandomDepthFirstPaths {
      * This method is different compared to the original one.
      */
     public List<Integer> pathTo(int v) {
-		// TODO
+		  LinkedList<Integer> output = new LinkedList<Integer>();
+      if (!hasPathTo(v)) return null;
+      for (int x = v; x != s; x = edgeTo[x]) {
+          output.addLast(x);
+      }
+      output.addLast(s);
+      return output;
     }
     
     public int [] edge() {
