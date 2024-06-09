@@ -29,6 +29,7 @@ public class RandomDepthFirstPaths {
     // depth first search from v
     private void randomDFS(Graph G, int v) {
       marked[v] = true;
+        Collections.shuffle(G.adj(v));
         // Iterate through all the adjacent vertices of the current vertex
         for (int w : G.adj(v)) {
             if (!marked[w]) {
@@ -53,6 +54,7 @@ public class RandomDepthFirstPaths {
         Stack<Integer> stack = new Stack<Integer>();
         marked[s] = true;
         stack.push(s);
+        Collections.shuffle(G.adj(s));
         while (!stack.isEmpty()) {
             int v = stack.peek();
             if (adj[v].hasNext()) {

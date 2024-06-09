@@ -35,7 +35,8 @@ public class Maze{
      * @throws IllegalArgumentException unless both {@code 0 <= v < V} and {@code 0 <= w < V}
      */
     public void addEdge(int v, int w) {
-		// TODO
+      if (v == w) throw new IllegalArgumentException("Self-loops are not allowed");
+      M.addEdge(v, w);      
     }
     
     /**
@@ -45,7 +46,10 @@ public class Maze{
      * @return true or false
      */
     public boolean hasEdge( int v, int w){
-		// TODO
+      if (M.adj(v).contains(w) || v == w) {
+        return true;
+      }
+      return false;
     }	
     
     /**
