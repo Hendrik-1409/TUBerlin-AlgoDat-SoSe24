@@ -1,5 +1,7 @@
+import java.lang.reflect.Array;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Random;
 import java.util.Stack;
 /**
  * Class that represents a maze with N*N junctions.
@@ -35,7 +37,6 @@ public class Maze{
      * @throws IllegalArgumentException unless both {@code 0 <= v < V} and {@code 0 <= w < V}
      */
     public void addEdge(int v, int w) {
-      if (v == w) throw new IllegalArgumentException("Self-loops are not allowed");
       M.addEdge(v, w);      
     }
     
@@ -57,7 +58,19 @@ public class Maze{
      * @return Graph G -- Basic grid on which the Maze is built
      */
     public Graph mazegrid() {
-		// TODO
+      Graph G = new Graph(N*N);
+      for (int y = 0; y < N; y++) {
+        for (int x = 0; x < N; x++) {
+          int v = x + y * N;
+          if (x < N - 1) {
+            addEdge(v, v + 1);
+          }
+          if (y < N - 1) {
+            addEdge(v, v + N);
+          }
+        }
+      }
+      return G;
     }
     
     /**
@@ -65,7 +78,12 @@ public class Maze{
      * The maze is build with a randomized DFS as the Graph M.
      */
     private void buildMaze() {
-		// TODO
+		  Graph G = mazegrid();
+      RandomDepthFirstPaths dfs = new RandomDepthFirstPaths(G, startnode);
+      dfs.randomNonrecursiveDFS(G);
+      for (int i = 1; i < dfs.edge().length; i++) {
+        M.addEdge(dfs.edge()[i - 1], dfs.edge()[i]);
+      }
     }
 
     /**
