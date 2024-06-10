@@ -1,7 +1,7 @@
-import java.lang.reflect.Array;
+//import java.lang.reflect.Array;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Random;
+//import java.util.Random;
 import java.util.Stack;
 /**
  * Class that represents a maze with N*N junctions.
@@ -63,10 +63,10 @@ public class Maze{
         for (int x = 0; x < N; x++) {
           int v = x + y * N;
           if (x < N - 1) {
-            addEdge(v, v + 1);
+            G.addEdge(v, v + 1);
           }
           if (y < N - 1) {
-            addEdge(v, v + N);
+            G.addEdge(v, v + N);
           }
         }
       }
