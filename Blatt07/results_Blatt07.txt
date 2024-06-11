@@ -1,0 +1,32 @@
+datsose24,  11.06.2024, 14:21:59, 0c182ca8105512a030684fd6990914268b9f58ff
+Korrektur Blatt 7
+
+Aufgabe 3.1
+	Funktionieren die get- und set-Methode für die Koordinaten?: 0/5
+	  java.lang.Error: Unresolved compilation problem: 
+	This method must return a result of type double[][]
+
+Total points for Aufgabe 3.1: 0/5
+
+Aufgabe 3.3
+	Funktioniert die Berechung der Cluster für vorgegebene Clusteranzahl richtig?: 0/30
+	  java.lang.AssertionError: Nicht die richtige Anzahl an Clustern gefunden für den Ihnen gegebenen Testfall graph_small.txt. expected [3] but found [0]
+Total points for Aufgabe 3.3: 0/30
+
+Aufgabe 3.4
+	Funktioniert die Berechung des Variationskoeffizienten richtig?: 0/10
+	  java.lang.Error: Unresolved compilation problem: 
+	This method must return a result of type double
+
+	Funktioniert die Berechung der Cluster für vorgegebenen threshold richtig?: 0/35
+	  java.lang.AssertionError: Nicht die richtige Anzahl an Clustern gefunden. expected [3] but found [0]
+Total points for Aufgabe 3.4: 0/45
+
+Aufgabe 3.5
+	Funktioniert die Validierung für den IRIS Datensatz?: 0/20
+	  java.lang.Error: Unresolved compilation problem: 
+	This method must return a result of type double[][]
+
+Total points for Aufgabe 3.5: 0/20
+
+Total points: 0/100
