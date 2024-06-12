@@ -1,0 +1,70 @@
+datsose24,  12.06.2024, 09:36:03, d087e4683cf5bb3bbe35d405e61d8790f8b7b853
+Korrektur Blatt 8
+
+Aufgabe 3.2
+	Does the method contrast() of MatrixImage work correctly?: 0/5
+	  java.lang.Error: Unresolved compilation problem: 
+	This method must return a result of type double
+
+	Does the method removeVPath() of MatrixImage work correctly?: 0/15
+	  java.lang.AssertionError: Method removeVPath does not yield the expected result.
+We tested path [4, 0, 0, 6, 6] for the following matrix:
+4 4 4 1 1 4 4 4 
+8 8 1 8 8 1 8 8 
+4 1 4 4 4 4 1 4 
+8 8 1 8 8 1 8 8 
+4 4 4 1 1 4 4 4 
+and expected the following result:
+4 4 4 1 4 4 4 
+8 1 8 8 1 8 8 
+1 4 4 4 4 1 4 
+8 8 1 8 8 1 8 
+4 4 4 1 1 4 4 
+but your method returned:
+4 4 4 1 1 4 4 4 
+8 8 1 8 8 1 8 8 
+4 1 4 4 4 4 1 4 
+8 8 1 8 8 1 8 8 
+4 4 4 1 1 4 4 4 
+
+Total points for Aufgabe 3.2: 0/20
+
+Aufgabe 3.3
+	Does the method pathTo() of ShortestPathsTopological return an optimal path for large DAGs?: 0/4
+	   java.lang.NullPointerException in ShortestPathsTopological.hasPathTo(ShortestPathsTopological.java:17)
+	Does the method pathTo() of ShortestPathsTopological return an optimal path for large DAGs?: 0/6
+	   java.lang.NullPointerException in ShortestPathsTopological.hasPathTo(ShortestPathsTopological.java:17)
+	Does the method pathTo() of ShortestPathsTopological return a valid path for large DAGs?: 0/4
+	   java.lang.NullPointerException in ShortestPathsTopological.hasPathTo(ShortestPathsTopological.java:17)
+	Does the method pathTo() of ShortestPathsTopological return a valid path for large DAGs?: 0/6
+	   java.lang.NullPointerException in ShortestPathsTopological.hasPathTo(ShortestPathsTopological.java:17)
+	Does the method pathTo() of ShortestPathsTopological return an optimal path for medium-sized DAGs?: 0/4
+	   java.lang.NullPointerException in ShortestPathsTopological.hasPathTo(ShortestPathsTopological.java:17)
+	Does the method pathTo() of ShortestPathsTopological return an optimal path for medium-sized DAGs?: 0/6
+	   java.lang.NullPointerException in ShortestPathsTopological.hasPathTo(ShortestPathsTopological.java:17)
+	Does the method pathTo() of ShortestPathsTopological return a valid path for medium-sized DAGs?: 0/4
+	   java.lang.NullPointerException in ShortestPathsTopological.hasPathTo(ShortestPathsTopological.java:17)
+	Does the method pathTo() of ShortestPathsTopological return a valid path for medium-sized DAGs?: 0/6
+	   java.lang.NullPointerException in ShortestPathsTopological.hasPathTo(ShortestPathsTopological.java:17)
+	Does the method pathTo() of ShortestPathsTopological return an optimal path for small DAGs?: 0/2
+	   java.lang.NullPointerException in ShortestPathsTopological.hasPathTo(ShortestPathsTopological.java:17)
+	Does the method pathTo() of ShortestPathsTopological return an optimal path for small DAGs?: 0/3
+	   java.lang.NullPointerException in ShortestPathsTopological.hasPathTo(ShortestPathsTopological.java:17)
+	Does the method pathTo() of ShortestPathsTopological return a valid path for small DAGs?: 0/2
+	   java.lang.NullPointerException in ShortestPathsTopological.hasPathTo(ShortestPathsTopological.java:17)
+	Does the method pathTo() of ShortestPathsTopological return a valid path for small DAGs?: 0/3
+	   java.lang.NullPointerException in ShortestPathsTopological.hasPathTo(ShortestPathsTopological.java:17)
+Total points for Aufgabe 3.3: 0/50
+
+Aufgabe 3.4
+	Does the method leastContrastImageVPath() of ContentAwareImageResizing return an optimal path?: 0/20
+	  java.lang.Error: Unresolved compilation problem: 
+	This method must return a result of type int[]
+
+	Does the method leastContrastImageVPath() of ContentAwareImageResizing return a valid path?: 0/10
+	  java.lang.Error: Unresolved compilation problem: 
+	This method must return a result of type int[]
+
+Total points for Aufgabe 3.4: 0/30
+
+Total points: 0/100
