@@ -1,12 +1,9 @@
-datsose24,  11.06.2024, 14:21:59, 0c182ca8105512a030684fd6990914268b9f58ff
+datsose24,  15.06.2024, 12:20:53, eca1951b32c6a27b2710177c4a9e67bb66f0da58
 Korrektur Blatt 7
 
 Aufgabe 3.1
-	Funktionieren die get- und set-Methode für die Koordinaten?: 0/5
-	  java.lang.Error: Unresolved compilation problem: 
-	This method must return a result of type double[][]
-
-Total points for Aufgabe 3.1: 0/5
+	Funktionieren die get- und set-Methode für die Koordinaten?: 5/5
+Total points for Aufgabe 3.1: 5/5
 
 Aufgabe 3.3
 	Funktioniert die Berechung der Cluster für vorgegebene Clusteranzahl richtig?: 0/30
@@ -25,8 +22,8 @@ Total points for Aufgabe 3.4: 0/45
 Aufgabe 3.5
 	Funktioniert die Validierung für den IRIS Datensatz?: 0/20
 	  java.lang.Error: Unresolved compilation problem: 
-	This method must return a result of type double[][]
+	This method must return a result of type int[]
 
 Total points for Aufgabe 3.5: 0/20
 
-Total points: 0/100
+Total points: 5/100
