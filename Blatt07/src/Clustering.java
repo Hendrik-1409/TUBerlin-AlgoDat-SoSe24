@@ -2,6 +2,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.PriorityQueue;
 import java.awt.Color;
 
 /**
@@ -74,6 +75,47 @@ public class Clustering {
 	 * @param numberOfClusters number of expected clusters
 	 */
 	public void findClusters(int numberOfClusters){
+		PriorityQueue <Edge> pq= new PriorityQueue <Edge>();
+		boolean[] marked = new boolean [G.V()];
+		int[] parent = new int [G.V()];
+
+		marked[0]=true;
+		for (Edge e : G.adj(0)) {
+			int w = e.other(0);
+			if(!marked[w]) {
+				pq.add(e);
+			}
+		}
+
+		while(!pq.isEmpty()) {
+			Edge e = pq.poll();
+			int v = e.either();
+			int w = e.other(v);
+			if(!marked[w]) {
+				parent[w]=v;
+				marked[w]=true;
+				for (Edge e2 : G.adj(w)) {
+					int w2 = e2.other(w);
+					if(!marked[w2]) {
+						pq.add(e2);
+					}
+				}
+			} else if(!marked[v]) {
+				parent[v]=w;
+				marked[v]=true;
+				for (Edge e2 : G.adj(v)) {
+					int w2 = e2.other(v);
+					if(!marked[w2]) {
+						pq.add(e2);
+					}
+				}
+			}
+		}
+	}
+
+
+
+	public void connectedComponents() {
 		// TODO
 	}
 	
@@ -105,7 +147,24 @@ public class Clustering {
 	 * @return coefficient of variation
 	 */
 	public double coefficientOfVariation(List <Edge> part) {
-		// TODO
+		if (part.size() == 0) {
+			return 0.0;
+		}
+		System.out.println("Part size: " + part.size());
+		double sum = 0;
+		double sumxSquared = 0;
+		for(Edge e: part) {
+			sum += (double)e.weight();
+			sumxSquared += (double)Math.pow(e.weight(),2);
+			System.out.println("Edge weight: " + e.weight() + ", sum: " + sum + ", sumxSquared: " + sumxSquared);
+		}
+		double faktor = (double)1/(double)part.size();
+		double zähler = Math.sqrt(faktor*sumxSquared - Math.pow(faktor*sum,2));
+		double nenner = faktor*sum;
+		System.out.println("Sum: " + sum + ", sumxSquared: " + sumxSquared + ", zähler: " + zähler + ", nenner: " + nenner);
+		double coefficientOfVariation = zähler/nenner;
+		System.out.println("Coefficient of variation: " + coefficientOfVariation);
+		return coefficientOfVariation;
 	}
 	
 	/**
