@@ -87,13 +87,15 @@ public class Clustering {
 			}
 		}
 
-		while(!pq.isEmpty()) {
+		int connectedComponents=0;
+		while(!pq.isEmpty() && connectedComponents<numberOfClusters) {
 			Edge e = pq.poll();
 			int v = e.either();
 			int w = e.other(v);
 			if(!marked[w]) {
 				parent[w]=v;
 				marked[w]=true;
+				connectedComponents++;
 				for (Edge e2 : G.adj(w)) {
 					int w2 = e2.other(w);
 					if(!marked[w2]) {
@@ -109,6 +111,21 @@ public class Clustering {
 						pq.add(e2);
 					}
 				}
+			}
+		}
+
+		clusters=new LinkedList <List<Integer>>();
+		for (int v=0; v<G.V(); v++) {
+			if(marked[v]) {
+				int w = v;
+				List <Integer> cluster = new LinkedList <Integer>();
+				while(w!=parent[w]) {
+					cluster.add(w);
+					w=parent[w];
+				}
+				cluster.add(w);
+				Collections.sort(cluster);
+				clusters.add(cluster);
 			}
 		}
 	}
