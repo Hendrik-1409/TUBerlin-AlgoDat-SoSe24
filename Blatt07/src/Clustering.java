@@ -129,12 +129,6 @@ public class Clustering {
 			}
 		}
 	}
-
-
-
-	public void connectedComponents() {
-		// TODO
-	}
 	
 	/**
 	 * This method finds clusters based on a MST and a threshold for the coefficient of variation.
@@ -146,7 +140,68 @@ public class Clustering {
 	 * @param threshold for the coefficient of variation
 	 */
 	public void findClusters(double threshold){
-		// TODO
+		PriorityQueue <Edge> pq= new PriorityQueue <Edge>();
+		boolean[] marked = new boolean [G.V()];
+		int[] parent = new int [G.V()];
+
+		marked[0]=true;
+		for (Edge e : G.adj(0)) {
+			int w = e.other(0);
+			if(!marked[w]) {
+				pq.add(e);
+			}
+		}
+
+		int connectedComponents=0;
+		while(!pq.isEmpty() && connectedComponents<G.V()) {
+			Edge e = pq.poll();
+			int v = e.either();
+			int w = e.other(v);
+			if(!marked[w]) {
+				parent[w]=v;
+				marked[w]=true;
+				connectedComponents++;
+				List <Edge> part = new LinkedList <Edge>();
+				part.add(e);
+				for (Edge e2 : G.adj(w)) {
+					int w2 = e2.other(w);
+					if(!marked[w2] && parent[w2]!=v) {
+						pq.remove(e2);
+						part.add(e2);
+					}
+				}
+				double coefficientOfVariation = coefficientOfVariation(part);
+				if(coefficientOfVariation>threshold) {
+					for (Edge e2 : part) {
+						pq.add(e2);
+					}
+				}
+			} else if(!marked[v]) {
+				parent[v]=w;
+				marked[v]=true;
+				for (Edge e2 : G.adj(v)) {
+					int w2 = e2.other(v);
+					if(!marked[w2]) {
+						pq.add(e2);
+					}
+				}
+			}
+		}
+
+		clusters=new LinkedList <List<Integer>>();
+		for (int v=0; v<G.V(); v++) {
+			if(marked[v]) {
+				int w = v;
+				List <Integer> cluster = new LinkedList <Integer>();
+				while(w!=parent[w]) {
+					cluster.add(w);
+					w=parent[w];
+				}
+				cluster.add(w);
+				Collections.sort(cluster);
+				clusters.add(cluster);
+			}
+		}
 	}
 	
 	/**
@@ -154,7 +209,17 @@ public class Clustering {
 	 * @return array of the number of the correctly classified data points per cluster
 	 */
 	public int[] validation() {
-		// TODO
+		int[] result = new int[clusters.size()];
+		for (int i = 0; i < G.V(); i++) {
+			boolean found = false;
+			for (int j = 0; j < clusters.size() && !found; j++) {
+				if (clusters.get(j).contains(i)) {
+					result[j]++;
+					found = true;
+				}
+			}
+		}
+		return result;
 	}
 	
 	/**
