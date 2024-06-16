@@ -4,6 +4,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.PriorityQueue;
 import java.awt.Color;
+import java.util.Map;
+import java.util.HashMap;
 
 /**
  * This class solves a clustering problem with the Prim algorithm.
@@ -75,59 +77,31 @@ public class Clustering {
 	 * @param numberOfClusters number of expected clusters
 	 */
 	public void findClusters(int numberOfClusters){
-		PriorityQueue <Edge> pq= new PriorityQueue <Edge>();
-		boolean[] marked = new boolean [G.V()];
-		int[] parent = new int [G.V()];
-
-		marked[0]=true;
-		for (Edge e : G.adj(0)) {
-			int w = e.other(0);
-			if(!marked[w]) {
-				pq.add(e);
-			}
+		PrimMST mst = new PrimMST(G);
+		List<Edge> edges = (List) mst.edges();
+		Collections.sort(edges);
+		for (int i = 0; i < numberOfClusters - 1; i++) {
+			edges.remove(i);
 		}
+		connectedComponents(edges);
+	}
 
-		int connectedComponents=0;
-		while(!pq.isEmpty() && connectedComponents<numberOfClusters) {
-			Edge e = pq.poll();
+	public void connectedComponents(List<Edge> edges) {
+		UF clusterfuck = new UF(G.V());
+		for (Edge e : edges) {
 			int v = e.either();
 			int w = e.other(v);
-			if(!marked[w]) {
-				parent[w]=v;
-				marked[w]=true;
-				connectedComponents++;
-				for (Edge e2 : G.adj(w)) {
-					int w2 = e2.other(w);
-					if(!marked[w2]) {
-						pq.add(e2);
-					}
-				}
-			} else if(!marked[v]) {
-				parent[v]=w;
-				marked[v]=true;
-				for (Edge e2 : G.adj(v)) {
-					int w2 = e2.other(v);
-					if(!marked[w2]) {
-						pq.add(e2);
-					}
-				}
-			}
+			clusterfuck.union(v, w);
 		}
-
-		clusters=new LinkedList <List<Integer>>();
-		for (int v=0; v<G.V(); v++) {
-			if(marked[v]) {
-				int w = v;
-				List <Integer> cluster = new LinkedList <Integer>();
-				while(w!=parent[w]) {
-					cluster.add(w);
-					w=parent[w];
-				}
-				cluster.add(w);
-				Collections.sort(cluster);
-				clusters.add(cluster);
+		Map<Integer, List<Integer>> clusterfuckMap = new HashMap<Integer, List<Integer>>();
+		for (int i = 0; i < G.V(); i++) {
+			int id = clusterfuck.find(i);
+			if (!clusterfuckMap.containsKey(id)) {
+				clusterfuckMap.put(id, new LinkedList<Integer>());
 			}
+			clusterfuckMap.get(id).add(i);
 		}
+		this.clusters = new LinkedList<>(clusterfuckMap.values());
 	}
 	
 	/**
@@ -140,68 +114,6 @@ public class Clustering {
 	 * @param threshold for the coefficient of variation
 	 */
 	public void findClusters(double threshold){
-		PriorityQueue <Edge> pq= new PriorityQueue <Edge>();
-		boolean[] marked = new boolean [G.V()];
-		int[] parent = new int [G.V()];
-
-		marked[0]=true;
-		for (Edge e : G.adj(0)) {
-			int w = e.other(0);
-			if(!marked[w]) {
-				pq.add(e);
-			}
-		}
-
-		int connectedComponents=0;
-		while(!pq.isEmpty() && connectedComponents<G.V()) {
-			Edge e = pq.poll();
-			int v = e.either();
-			int w = e.other(v);
-			if(!marked[w]) {
-				parent[w]=v;
-				marked[w]=true;
-				connectedComponents++;
-				List <Edge> part = new LinkedList <Edge>();
-				part.add(e);
-				for (Edge e2 : G.adj(w)) {
-					int w2 = e2.other(w);
-					if(!marked[w2] && parent[w2]!=v) {
-						pq.remove(e2);
-						part.add(e2);
-					}
-				}
-				double coefficientOfVariation = coefficientOfVariation(part);
-				if(coefficientOfVariation>threshold) {
-					for (Edge e2 : part) {
-						pq.add(e2);
-					}
-				}
-			} else if(!marked[v]) {
-				parent[v]=w;
-				marked[v]=true;
-				for (Edge e2 : G.adj(v)) {
-					int w2 = e2.other(v);
-					if(!marked[w2]) {
-						pq.add(e2);
-					}
-				}
-			}
-		}
-
-		clusters=new LinkedList <List<Integer>>();
-		for (int v=0; v<G.V(); v++) {
-			if(marked[v]) {
-				int w = v;
-				List <Integer> cluster = new LinkedList <Integer>();
-				while(w!=parent[w]) {
-					cluster.add(w);
-					w=parent[w];
-				}
-				cluster.add(w);
-				Collections.sort(cluster);
-				clusters.add(cluster);
-			}
-		}
 	}
 	
 	/**
@@ -232,20 +144,16 @@ public class Clustering {
 		if (part.size() == 0) {
 			return 0.0;
 		}
-		System.out.println("Part size: " + part.size());
 		double sum = 0;
 		double sumxSquared = 0;
 		for(Edge e: part) {
 			sum += (double)e.weight();
 			sumxSquared += (double)Math.pow(e.weight(),2);
-			System.out.println("Edge weight: " + e.weight() + ", sum: " + sum + ", sumxSquared: " + sumxSquared);
 		}
 		double faktor = (double)1/(double)part.size();
 		double zähler = Math.sqrt(faktor*sumxSquared - Math.pow(faktor*sum,2));
 		double nenner = faktor*sum;
-		System.out.println("Sum: " + sum + ", sumxSquared: " + sumxSquared + ", zähler: " + zähler + ", nenner: " + nenner);
 		double coefficientOfVariation = zähler/nenner;
-		System.out.println("Coefficient of variation: " + coefficientOfVariation);
 		return coefficientOfVariation;
 	}
 	
