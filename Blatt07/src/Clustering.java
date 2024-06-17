@@ -80,8 +80,9 @@ public class Clustering {
 		PrimMST mst = new PrimMST(G);
 		List<Edge> edges = (List) mst.edges();
 		Collections.sort(edges);
+		Collections.reverse(edges);
 		for (int i = 0; i < numberOfClusters - 1; i++) {
-			edges.remove(i);
+			edges.removeFirst();
 		}
 		connectedComponents(edges);
 	}
@@ -102,6 +103,10 @@ public class Clustering {
 			clusterfuckMap.get(id).add(i);
 		}
 		this.clusters = new LinkedList<>(clusterfuckMap.values());
+		for (List<Integer> cluster : this.clusters) {
+			Collections.sort(cluster);
+		}
+		Collections.sort(clusters, (a, b) -> a.get(0) - b.get(0));
 	}
 	
 	/**
@@ -114,6 +119,14 @@ public class Clustering {
 	 * @param threshold for the coefficient of variation
 	 */
 	public void findClusters(double threshold){
+		PrimMST mst = new PrimMST(G);
+		List<Edge> edges = (List) mst.edges();
+		Collections.sort(edges);
+		Collections.reverse(edges);
+		while (coefficientOfVariation(edges) > threshold) {
+			edges.removeFirst();
+		}
+		connectedComponents(edges);
 	}
 	
 	/**
@@ -122,14 +135,14 @@ public class Clustering {
 	 */
 	public int[] validation() {
 		int[] result = new int[clusters.size()];
-		for (int i = 0; i < G.V(); i++) {
-			boolean found = false;
-			for (int j = 0; j < clusters.size() && !found; j++) {
-				if (clusters.get(j).contains(i)) {
-					result[j]++;
-					found = true;
+		for (List<Integer> cluster : clusters) {
+			int correct = 0;
+			for (int i : cluster) {
+				if (labeled.get(clusters.indexOf(cluster)).contains(i)) {
+					correct++;
 				}
 			}
+			result[clusters.indexOf(cluster)] = correct;
 		}
 		return result;
 	}
@@ -150,7 +163,7 @@ public class Clustering {
 			sum += (double)e.weight();
 			sumxSquared += (double)Math.pow(e.weight(),2);
 		}
-		double faktor = (double)1/(double)part.size();
+		double faktor = 1.0d/(double)part.size();
 		double zähler = Math.sqrt(faktor*sumxSquared - Math.pow(faktor*sum,2));
 		double nenner = faktor*sum;
 		double coefficientOfVariation = zähler/nenner;
