@@ -1,4 +1,4 @@
-datsose24,  17.06.2024, 00:30:56, 4295ac3951de7f1157e4dac53b350b6a09e48c52
+datsose24,  17.06.2024, 12:26:43, 87b85c807904d37975ba99ea6c834761cec75406
 Korrektur Blatt 7
 
 Aufgabe 3.1
@@ -6,19 +6,16 @@ Aufgabe 3.1
 Total points for Aufgabe 3.1: 5/5
 
 Aufgabe 3.3
-	Funktioniert die Berechung der Cluster für vorgegebene Clusteranzahl richtig?: 0/30
-	  java.lang.AssertionError: Der Ihnen gegebene Testfall graph_small.txt gibt nicht die erwarteten Cluster zurück. Erwartet: [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13], [14, 15, 16, 17, 18, 19, 20, 21], [22, 23, 24, 25, 26, 27, 28, 29]], Ihr Ergebnis: [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 23, 24, 25, 26, 27, 29], [21], [28]] did not expect to find [true] but found [false]
-Total points for Aufgabe 3.3: 0/30
+	Funktioniert die Berechung der Cluster für vorgegebene Clusteranzahl richtig?: 30/30
+Total points for Aufgabe 3.3: 30/30
 
 Aufgabe 3.4
 	Funktioniert die Berechung des Variationskoeffizienten richtig?: 10/10
-	Funktioniert die Berechung der Cluster für vorgegebenen threshold richtig?: 0/35
-	  java.lang.AssertionError: Nicht die richtige Anzahl an Clustern gefunden. expected [3] but found [0]
-Total points for Aufgabe 3.4: 10/45
+	Funktioniert die Berechung der Cluster für vorgegebenen threshold richtig?: 35/35
+Total points for Aufgabe 3.4: 45/45
 
 Aufgabe 3.5
-	Funktioniert die Validierung für den IRIS Datensatz?: 0/20
-	  java.lang.AssertionError: Die Klassifizierung des IRIS Datensatzes gibt für den gegebenen Algorithmus nicht das erwartete Ergebnis.. did not expect to find [true] but found [false]
-Total points for Aufgabe 3.5: 0/20
+	Funktioniert die Validierung für den IRIS Datensatz?: 20/20
+Total points for Aufgabe 3.5: 20/20
 
-Total points: 15/100
+Total points: 100/100
