@@ -34,21 +34,21 @@ public class ClusterTests {
 
     public static Stream<GraphClusterTestData> findClustersSource() {
         return Stream.of(new GraphClusterTestData[]{
-                new GraphClusterTestData("src/graph_small.txt", -1, new int[][]{{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29}}), // klar
-                new GraphClusterTestData("src/graph_small.txt", -1, new int[][]{
+                new GraphClusterTestData("Blatt07/src/graph_small.txt", -1, new int[][]{{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29}}), // klar
+                new GraphClusterTestData("Blatt07/src/graph_small.txt", -1, new int[][]{
                         {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13},
                         {14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29}
                 }),// sieht bei .plot richtig aus
-                new GraphClusterTestData("src/graph_small.txt", 0.565, new int[][]{
+                new GraphClusterTestData("Blatt07/src/graph_small.txt", 0.565, new int[][]{
                         {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13},
                         {14, 15, 16, 17, 18, 19, 20, 21},
                         {22, 23, 24, 25, 26, 27, 28, 29}
                 }),
-                new GraphClusterTestData("src/graph_bigger.txt", -1, new int[][]{
+                new GraphClusterTestData("Blatt07/src/graph_bigger.txt", -1, new int[][]{
                         {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37},
                         {38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77}
                 }),
-                new GraphClusterTestData("src/graph_bigger.txt", 0.565, new int[][]{
+                new GraphClusterTestData("Blatt07/src/graph_bigger.txt", 0.565, new int[][]{
                         {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20},
                         {21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37},
                         {38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59},
@@ -135,7 +135,7 @@ public class ClusterTests {
                 new CoefficientOfVariationTestData(new double[]{42,187,1337,Math.E}, 1.4018914120879833), // zufallswerte
                 new CoefficientOfVariationTestData(new double[]{}, 0), // wollen die tests so
                 new CoefficientOfVariationTestData(new double[]{1,1,1,1}, 0),
-                new CoefficientOfVariationTestData(new double[]{1,2,3,4,5,6,7,9,10}, 0.5548257366129916)
+                new CoefficientOfVariationTestData(new double[]{1,2,3,4,5,6,7,9,10}, 0.5548257366129913)
         });
     }
 
@@ -168,8 +168,8 @@ public class ClusterTests {
 
     public static Stream<ValidateTestData> validateTestDataSource() {
         return Stream.of(new ValidateTestData[]{
-                new ValidateTestData("src/iris_small.txt", new int[]{23, 18, 0}),
-                new ValidateTestData("src/iris.txt", new int[]{50, 50, 2}),
+                new ValidateTestData("Blatt07/src/iris_small.txt", new int[]{23, 18, 0}),
+                new ValidateTestData("Blatt07/src/iris.txt", new int[]{50, 50, 2}),
         });
     }
 

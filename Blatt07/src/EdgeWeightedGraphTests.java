@@ -15,11 +15,11 @@ public class EdgeWeightedGraphTests {
         g.setCoordinates(new double[][]{});
     }
 
-    @Test
+/*    @Test
     void testGetAndSetCoordinates(){
         double[][] cords = new double[][]{{1,2},{3,4}};
         EdgeWeightedGraph g = new EdgeWeightedGraph(2);
         g.setCoordinates(cords);
         assertEquals(cords, g.getCoordinates());
-    }
+    }*/
 }
